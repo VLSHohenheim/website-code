@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Mail } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
@@ -12,9 +12,16 @@ function App() {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
+    setIsDarkMode(prevMode => !prevMode);
   };
 
   const toggleLanguage = () => {
