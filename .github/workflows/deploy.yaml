@@ -30,7 +30,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git clone --depth=1 https://github.com/VLSHohenheim/VLSHohenheim.github.io.git deploy
           rm -rf deploy/*
-          cp -r build/* deploy/
+          cp -r dist/* deploy/
           cd deploy
           git add .
           git commit -m "Deploy from GitHub Actions"
