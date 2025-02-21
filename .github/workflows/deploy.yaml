@@ -1,0 +1,38 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Deployment Repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git clone --depth=1 https://github.com/VLSHohenheim/VLSHohenheim.github.io.git deploy
+          rm -rf deploy/*
+          cp -r build/* deploy/
+          cd deploy
+          git add .
+          git commit -m "Deploy from GitHub Actions"
+          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/YOUR-USERNAME/VLSHohenheim.github.io.git main
+
