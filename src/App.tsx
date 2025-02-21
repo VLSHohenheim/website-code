@@ -75,9 +75,9 @@ function App() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 mb-8 shadow-lg">
               <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">{t('events.nextEvent')}</h3>
               <div className="space-y-2 text-[#003865] dark:text-white">
-                <p><strong>{t('events.date')}:</strong> {t('events.comingSoon')}</p>
-                <p><strong>{t('events.time')}:</strong> {t('events.comingSoon')}</p>
-                <p><strong>{t('events.location')}:</strong> {t('events.comingSoon')}</p>
+                <p><strong>{t('events.date')}:</strong> {t('events.dateDetail')}</p>
+                <p><strong>{t('events.time')}:</strong> {t('events.timeDetail')}</p>
+                <p><strong>{t('events.location')}:</strong> {t('events.locationDetail')}</p>
               </div>
             </div>
             <div className="flex justify-center space-x-4">

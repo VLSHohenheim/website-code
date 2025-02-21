@@ -16,11 +16,13 @@ export const translations = {
     },
     events: {
       title: 'Upcoming Events',
-      nextEvent: 'Next Event',
+      nextEvent: 'Ritter Sport Excursion',
       date: 'Date',
       time: 'Time',
       location: 'Location',
-      comingSoon: 'Coming Soon',
+      locationDetail: 'Administration reception Ritter Sport, Waldenbuch',
+      timeDetail: '09:20 AM',
+      dateDetail: '9th April 2025',
       register: 'Register Now',
       moreInfo: 'More Information'
     },
@@ -58,11 +60,13 @@ export const translations = {
     },
     events: {
       title: 'Kommende Veranstaltungen',
-      nextEvent: 'Nächste Veranstaltung',
+      nextEvent: 'Exkursion Ritter Sport',
       date: 'Datum',
       time: 'Uhrzeit',
       location: 'Ort',
-      comingSoon: 'Demnächst',
+      locationDetail: 'Verwaltungsempfang Ritter Sport, Waldenbuch',
+      timeDetail: 'ab 09:20',
+      dateDetail: '09. April 2025',
       register: 'Jetzt Anmelden',
       moreInfo: 'Weitere Informationen'
     },
