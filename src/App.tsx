@@ -57,7 +57,7 @@ function App() {
         id="about"
         className="min-h-screen bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg')"
+          backgroundImage: "url('https://i.imgur.com/OrpB8Oj.jpeg')"
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
