@@ -7,7 +7,7 @@ import ContactForm from './components/ContactForm';
 import ImpressumModal from './components/ImpressumModal';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
