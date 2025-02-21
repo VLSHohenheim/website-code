@@ -41,7 +41,7 @@ function App() {
         id="welcome"
         className="h-screen bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1920')"
+          backgroundImage: "url('https://images.pexels.com/photos/1366942/pexels-photo-1366942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')"
         }}
       >
         <div className="h-full flex items-center justify-center bg-black bg-opacity-50">
