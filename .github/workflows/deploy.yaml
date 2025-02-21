@@ -34,5 +34,5 @@ jobs:
           cd deploy
           git add .
           git commit -m "Deploy from GitHub Actions"
-          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/YOUR-USERNAME/VLSHohenheim.github.io.git main
+          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/VLSHohenheim/VLSHohenheim.github.io.git main
 
