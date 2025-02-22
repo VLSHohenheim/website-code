@@ -122,8 +122,16 @@ function App() {
             <div className="flex items-center justify-center space-x-4 mb-8">
               <h2 className="text-4xl font-bold text-[#003865] dark:text-white">{t('posts.title')}</h2>
             </div>
-            <InstagramEmbed
-              url="https://www.instagram.com/p/DEALUtoIrXZ/" width={400} />
+            <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
+              <div className="max-w-4xl mx-auto px-4 text-center">
+                <div className="flex items-center justify-center space-x-4 mb-8">
+                  <h2 className="text-4xl font-bold text-[#003865] dark:text-white">{t('posts.title')}</h2>
+                </div>
+                <div className="instagram-embed-container dark:bg-gray-800 p-2 rounded-lg">
+                  <InstagramEmbed url="https://www.instagram.com/p/DEALUtoIrXZ/" width={400} />
+               </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
