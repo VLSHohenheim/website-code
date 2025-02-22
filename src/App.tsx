@@ -117,16 +117,9 @@ function App() {
           backgroundImage: "url('https://images.pexels.com/photos/2055500/pexels-photo-2055500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')"
         }}
       >
-        <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <h2 className="text-4xl font-bold text-[#003865] dark:text-white">{t('posts.title')}</h2>
-            </div>
-              <div className="instagram-embed-container dark:bg-gray-800 p-2 rounded-lg overflow-hidden">
-                <InstagramEmbed url="https://www.instagram.com/p/DEALUtoIrXZ/" width={400} />
-              </div>
-             </div>
-            </div>
+        <div
+          <InstagramEmbed url="https://www.instagram.com/p/DEALUtoIrXZ/" width={400} />
+        </div>
       </section>
 
       {/* Contact Section */}
