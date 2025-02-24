@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
             {t('nav.contact')}
           </Link>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-1">
             <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
               <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
               <span className="text-sm text-gray-800 dark:text-white">{currentLanguage}</span>
