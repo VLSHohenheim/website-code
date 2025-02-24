@@ -98,14 +98,14 @@ function App() {
               >
                 {t('events.register')}
               </a>
-              <a
-                href="https://docs.google.com/document/d/1K9ykelhGJONQ-dLcMoFBoYEalLivJEUDxvEMkhWBAww/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
+            <button
+              onClick={() => setIsMoreInfoOpen(true)}
+              className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
               >
-                {t('events.moreInfo')}
-              </a>
+              {t('events.moreInfo')}
+            </button>
+              <MoreInfoModal isOpen={isMoreInfoOpen} onClose={() => setIsMoreInfoOpen(false)} />
+
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ function App() {
           </div>
         </div>
       </footer>
-
+      
       <ImpressumModal isOpen={isImpressumOpen} onClose={() => setIsImpressumOpen(false)} />
     </div>
   );
