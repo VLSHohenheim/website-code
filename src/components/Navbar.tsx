@@ -7,18 +7,12 @@ import logo from "../assets/LogoUnifarbeInside.png";
 interface NavbarProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
-  toggleLanguage: (lang: string) => void;
+  toggleLanguage: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLanguage }) => {
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-
-  const handleLanguageChange = (lang: string) => {
-    toggleLanguage(lang);
-    setIsLanguageOpen(false);
-  };
 
   return (
     <nav className="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50">
@@ -47,24 +41,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <div className="relative">
-              <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
-                <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
-                <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
-              </button>
-              {isLanguageOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
-                  <div className="py-1">
-                    <button onClick={() => handleLanguageChange('en')} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      English
-                    </button>
-                    <button onClick={() => handleLanguageChange('de')} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Deutsch
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
+            <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
+              <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
+              <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
+            </button>
             <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
             </button>
@@ -92,14 +72,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
             {t('nav.contact')}
           </Link>
-          <div className="flex flex-col space-y-2">
-            <button onClick={() => handleLanguageChange('en')} className="p-2 text-left rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-              English
-            </button>
-            <button onClick={() => handleLanguageChange('de')} className="p-2 text-left rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-              Deutsch
-            </button>
-          </div>
+          <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
+            <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
+            <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
+          </button>
           <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
             {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
           </button>
