@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-2">
             <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
               <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
               <span className="text-sm text-gray-800 dark:text-white">{currentLanguage}</span>
