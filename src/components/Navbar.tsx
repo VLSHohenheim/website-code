@@ -10,7 +10,7 @@ interface NavbarProps {
   toggleLanguage: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLanguage }) => {
+const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -26,11 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <Link to="welcome" smooth={true} duration={500} className="cursor-pointer flex items-center space-x-3">
-              <img
-                src={logo}
-                alt="VLS Logo"
-                className="h-10 w-10 rounded-full"
-              />
+              <img src={logo} alt="VLS Logo" className="h-10 w-10 rounded-full" />
               <span className="text-gray-800 dark:text-white font-semibold">VLS Hohenheim</span>
             </Link>
           </div>
@@ -48,6 +44,16 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
             <Link to="contact" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300">
               {t('nav.contact')}
             </Link>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-4">
+            <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
+              <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
+              <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
+            </button>
+            <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+              {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
+            </button>
           </div>
           
           <div className="md:hidden">
@@ -74,8 +80,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           </Link>
           
           <div className="flex justify-between mt-4">
-            <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+            <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
               <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
+              <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
             </button>
             <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
