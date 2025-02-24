@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Für Webkit-basierte Browser (Chrome, Safari, Edge) */
+.modal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background-color: #003865; /* Design-Farbe */
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+/* Für Firefox */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #003865 transparent;
+}
