@@ -18,6 +18,8 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl overflow-y-auto max-h-[90vh] modal-scroll relative">
+        
+        {/* X Button oben rechts */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-2xl text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
@@ -84,4 +86,3 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
 };
 
 export default MoreInfoModal;
-
