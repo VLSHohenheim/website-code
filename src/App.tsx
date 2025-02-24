@@ -11,7 +11,9 @@ function App() {
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
+  const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
 
+  
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
