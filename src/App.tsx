@@ -126,8 +126,11 @@ function App() {
                   <div className="flex items-center justify-center space-x-4 mb-8">
                     <h2 className="text-4xl font-bold text-[#003865] dark:text-white">{t('posts.title')}</h2>
                   </div>
-                  <InstagramEmbed
-                    url="https://www.instagram.com/p/DEALUtoIrXZ/" width={400} />
+                    <InstagramEmbed
+                      url="https://www.instagram.com/p/DEALUtoIrXZ/"
+                      width="100%" // Breite auf 100% setzen
+                      maxWidth={600} // Optional: maxWidth für größere Bildschirme, um das Reel nicht zu groß zu machen
+                    />                  
                 </div>
               </div>
             </section>
