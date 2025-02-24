@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
       </div>
       
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 right-4 bg-white dark:bg-gray-900 shadow-lg rounded-lg w-48 p-4 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-16 right-4 bg-white dark:bg-gray-900 shadow-lg rounded-lg w-fit p-4 flex flex-col space-y-4">
           <Link to="about" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
             {t('nav.about')}
           </Link>
