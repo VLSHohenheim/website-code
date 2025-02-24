@@ -18,7 +18,7 @@
     "react-i18next": "^14.0.5",
     "react-scroll": "^1.9.0",
     "react-social-media-embed": "^2.5.17"
-    "react-icons": "^4.2.0" // Hier die neue Abhängigkeit hinzugefügt
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
