@@ -17,7 +17,15 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl overflow-y-auto max-h-[90vh] modal-scroll">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl overflow-y-auto max-h-[90vh] modal-scroll relative">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-2xl text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+
         <h2 className="text-2xl font-bold text-[#003865] dark:text-white mb-4 text-center">
           Invitation to the upcoming company excursion to Ritter Sport
         </h2>
@@ -70,16 +78,10 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
           Constantin von Conradi<br />
           Chairman of the Board, VLS Hohenheim
         </p>
-
-        <button
-          onClick={onClose}
-          className="mt-6 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full"
-        >
-          Close
-        </button>
       </div>
     </div>
   );
 };
 
 export default MoreInfoModal;
+
