@@ -5,6 +5,8 @@ import { InstagramEmbed } from 'react-social-media-embed';
 import Navbar from './components/Navbar';
 import ContactForm from './components/ContactForm';
 import ImpressumModal from './components/ImpressumModal';
+import MoreInfoModal from './components/MoreInfoModal';
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
