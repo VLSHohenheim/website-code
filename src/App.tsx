@@ -48,7 +48,7 @@ function App() {
           backgroundImage: "url('https://images.pexels.com/photos/29465326/pexels-photo-29465326/free-photo-of-dark-food-photography-with-berries-and-nuts.jpeg')"
         }}
       >
-        <div className="h-full flex items-center justify-center bg-black bg-opacity-70">
+        <div className="h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">{t('welcome.title')}</h1>
             <p className="text-xl">{t('welcome.subtitle')}</p>
