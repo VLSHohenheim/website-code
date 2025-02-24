@@ -22,3 +22,22 @@
   scrollbar-width: thin;
   scrollbar-color: #003865 transparent;
 }
+
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Content Styles */
+.content {
+    width: 100%;
+    box-sizing: border-box;
+}
