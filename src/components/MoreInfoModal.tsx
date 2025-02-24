@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const MoreInfoModal = ({ isOpen, onClose }) => {
+  // Deaktiviere das Scrollen im Hintergrund, wenn das Modal geöffnet ist.
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl overflow-y-auto max-h-[90vh]">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl overflow-y-auto max-h-[90vh] modal-scroll">
         <h2 className="text-2xl font-bold text-[#003865] dark:text-white mb-4 text-center">
           Invitation to the upcoming company excursion to Ritter Sport
         </h2>
@@ -71,4 +83,3 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
 };
 
 export default MoreInfoModal;
-
