@@ -14,6 +14,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
+  const currentLanguage = i18n.language === 'en' ? 'DE' : 'EN';
+
   return (
     <nav className="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           <div className="hidden md:flex items-center space-x-4">
             <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
               <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
-              <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
+              <span className="text-sm text-gray-800 dark:text-white">{currentLanguage}</span>
             </button>
             <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
@@ -72,13 +74,15 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
             {t('nav.contact')}
           </Link>
-          <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
-            <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
-            <span className="text-sm text-gray-800 dark:text-white">{i18n.language.toUpperCase()}</span>
-          </button>
-          <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-            {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
-          </button>
+          <div className="flex items-center justify-between">
+            <button onClick={toggleLanguage} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center space-x-2">
+              <Globe className="h-5 w-5 text-gray-800 dark:text-white" />
+              <span className="text-sm text-gray-800 dark:text-white">{currentLanguage}</span>
+            </button>
+            <button onClick={toggleDarkMode} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+              {isDarkMode ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-gray-800" />}
+            </button>
+          </div>
         </div>
       )}
     </nav>
