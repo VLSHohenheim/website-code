@@ -22,6 +22,8 @@ const ContactForm: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const isFormValid = Object.values(formData).every(value => value);
+
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
       <div>
@@ -84,14 +86,18 @@ const ContactForm: React.FC = () => {
         />
       </div>
 
-      {Object.values(formData).every(value => value) && (
-        <button
-          type="submit"
-          className="w-full bg-[#003865] text-white py-2 px-4 rounded-md hover:bg-[#002845] transition-colors"
-        >
-          {t('contact.send')}
-        </button>
-      )}
+      {/* Button immer anzeigen, aber deaktiviert, wenn Formular nicht vollständig ist */}
+      <button
+        type="submit"
+        disabled={!isFormValid}
+        className={`w-full py-2 px-4 rounded-md transition-colors ${
+          isFormValid
+            ? 'bg-[#003865] text-white hover:bg-[#002845]' // Wenn alle Felder ausgefüllt sind
+            : 'bg-gray-400 text-gray-700 cursor-not-allowed' // Wenn nicht alle Felder ausgefüllt sind
+        }`}
+      >
+        {t('contact.send')}
+      </button>
     </form>
   );
 };
