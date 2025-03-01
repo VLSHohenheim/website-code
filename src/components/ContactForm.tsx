@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
         className={`w-full py-2 px-4 rounded-md transition-colors ${
           isFormValid
             ? 'bg-[#003865] text-white hover:bg-[#002845]' // Wenn alle Felder ausgefüllt sind
-            : 'bg-gray-400 text-gray-700 cursor-not-allowed' // Wenn nicht alle Felder ausgefüllt sind
+            : 'bg-[#A0AEC0] text-gray-700 cursor-not-allowed' // Wenn nicht alle Felder ausgefüllt sind
         }`}
       >
         {t('contact.send')}
