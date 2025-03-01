@@ -58,14 +58,21 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
         <p className="text-gray-700 dark:text-gray-300">
           Please sign up as soon as possible via this 
           <a href="https://forms.gle/ng9m2FUAiRC57jfT8" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline"> Google Form</a>.
-          Spaces are limited, so we recommend early registration.
+          Spaces are limited, so we recommend early registration. As we will be divided into two groups of 12 students for the production tour, please indicate in your registration if you would like to be in the same group as specific participants. We will do our best to accommodate your preferences. A small registration fee of 3€ is required as compensation for club expenses. A registration is only complete once the fee has been received. Please register only if you are certain you can attend. If participation is no longer possible, for example due to illness, we kindly ask you to inform us as early as possible. A refund of the registration fee is only possible up to 14 days before the excursion date. All registrations exceeding the maximum number of 24 participants will be placed on the waiting list. If cancellations occur, a spot will be offered to you. The participation fee of 3€ will be retained for those on the waiting list and refunded if they do not move up after the excursion. By registering, you confirm that you have read and accept the hygiene and safety guidelines from the visited company and the event- and privacy terms of the club. Failure to comply with these requirements may result in exclusion on-site, and in such cases, the registration fee will not be refunded. You will receive a confirmation email once your registration is marked as complete.
         </p>
 
         <h3 className="text-xl font-semibold text-[#003865] dark:text-white mt-6">🔹 Travel Arrangements:</h3>
         <p className="text-gray-700 dark:text-gray-300">
-          Participants are responsible for their own travel arrangements. We recommend a group trip starting from the University of Hohenheim bus station.<br />
-          <strong>🚌 Meeting point:</strong> Bus stop Universität Hohenheim, 8:15 AM<br />
-          <span className="italic">Public transport ticket price is not included in the registration fee.</span>
+          Participants are responsible for their own travel arrangements. We recommend a group trip starting from the University of Hohenheim bus station.
+        </p>
+        <p className="text-gray-700 dark:text-gray-300">
+          This is the bus route we will suggest to you:
+        </p>
+        <ul className="list-none space-y-2 text-gray-700 dark:text-gray-300">
+          <li>🚌 <strong>Meeting point:</strong> Bus stop Universität Hohenheim, 8:15 AM</li>
+        </ul>
+        <p className="text-gray-700 dark:text-gray-300">
+          Please note that the public transport ticket price is not included in the registration fee. We recommend using the D-Ticket.
         </p>
 
         <p className="mt-6 text-gray-700 dark:text-gray-300">
