@@ -2,14 +2,10 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MoreInfoModal = ({ isOpen, onClose }) => {
-  const { t } = useTranslation(); // useTranslation Hook verwenden
+  const { t } = useTranslation();
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
@@ -31,48 +27,50 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
         <h2 className="text-2xl font-bold text-[#003865] dark:text-white mb-4 text-center">
           {t('modal.title')}
         </h2>
-        
+
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           <strong>{t('modal.greeting')}</strong><br />
-          {t('modal.description')}
+          {t('modal.intro')}
         </p>
 
         <ul className="list-none space-y-2 text-gray-800 dark:text-gray-300">
-          <li>📅 <strong>{t('modal.date')}:</strong> {t('modal.dateDetail')}</li>
-          <li>🕘 <strong>{t('modal.time')}:</strong> {t('modal.timeDetail')}</li>
-          <li>📍 <strong>{t('modal.location')}:</strong> {t('modal.locationDetail')}</li>
-          <li>🇬🇧 <strong>{t('modal.language')}:</strong> {t('modal.languageDetail')}</li>
-          <li>💰 <strong>{t('modal.cost')}:</strong> {t('modal.costDetail')}</li>
+          <li>{t('modal.details.date')}</li>
+          <li>{t('modal.details.time')}</li>
+          <li>{t('modal.details.location')}</li>
+          <li>{t('modal.details.language')}</li>
+          <li>{t('modal.details.cost')}</li>
         </ul>
 
-        <h3 className="text-xl font-semibold text-[#003865] dark:text-white mt-6">{t('modal.scheduleTitle')}</h3>
+        <h3 className="text-xl font-semibold text-[#003865] dark:text-white mt-6">
+          {t('modal.scheduleTitle')}
+        </h3>
         <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
-          <li>{t('modal.schedule1')}</li>
-          <li>{t('modal.schedule2')}</li>
-          <li>{t('modal.schedule3')}</li>
+          {t('modal.schedule', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
-
-        <p className="mt-6 text-gray-700 dark:text-gray-300">{t('modal.closing')}</p>
 
         <h3 className="text-xl font-semibold text-[#003865] dark:text-white mt-6">{t('modal.registrationTitle')}</h3>
         <p className="text-gray-700 dark:text-gray-300">
-          {t('modal.registrationDescription')}
+          {t('modal.registration')}&nbsp;
           <a href="https://forms.gle/ng9m2FUAiRC57jfT8" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
             {t('modal.registrationLink')}
-          </a>
+          </a>.
         </p>
+        <p className="text-gray-700 dark:text-gray-300">{t('modal.registrationInfo')}</p>
 
         <h3 className="text-xl font-semibold text-[#003865] dark:text-white mt-6">{t('modal.travelTitle')}</h3>
-        <p className="text-gray-700 dark:text-gray-300">{t('modal.travelDescription')}</p>
+        <p className="text-gray-700 dark:text-gray-300">{t('modal.travelInfo')}</p>
 
         <p className="mt-6 text-gray-700 dark:text-gray-300">
-          {t('modal.contact')}
-          <a href="mailto:vls.hohenheim@gmail.com" className="text-blue-500 underline"> vls.hohenheim@gmail.com</a>.
+          {t('modal.contact')}{' '}
+          <a href="mailto:vls.hohenheim@gmail.com" className="text-blue-500 underline">
+            vls.hohenheim@gmail.com
+          </a>.
         </p>
 
         <p className="mt-6 text-gray-700 dark:text-gray-300">
-          <strong>{t('modal.greetings')}</strong><br />
-          Constantin von Conradi<br />
+          <strong>{t('modal.closing')}</strong><br />
           {t('modal.signature')}
         </p>
       </div>
