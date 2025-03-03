@@ -15,7 +15,7 @@ const MoreInfoModal = ({ isOpen, onClose }) => {
 
   // Sicherstellen, dass `schedule` ein Array ist
   const schedule = t('modal.schedule', { returnObjects: true });
-  const scheduleArray = Array.isArray(schedule) ? schedule : [];
+  const scheduleArray = Array.isArray(schedule) ? schedule : Object.values(schedule || {});
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
