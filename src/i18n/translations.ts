@@ -12,7 +12,7 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      content: 'VLS Hohenheim is a student organization dedicated to connecting food science students and promoting professional development in the field.'
+      content: 'VLS Hohenheim is a student association dedicated to connecting food science students and promoting professional development in the field.'
     },
     events: {
       title: 'Upcoming Events',
