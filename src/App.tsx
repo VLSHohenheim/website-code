@@ -152,7 +152,85 @@ function App() {
   </div>
 </section>
 
-
+{/* Events Section */}
+ 
+      <section 
+        id="events" 
+        className="min-h-screen bg-fixed bg-cover bg-center" 
+        style={{ 
+          backgroundImage: "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" 
+        }} 
+      > 
+        <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90"> 
+          <div className="max-w-4xl mx-auto px-4 text-center"> 
+            <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">{t('events.title')}</h2> 
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 mb-8 shadow-lg"> 
+              <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">{t('events.nextEvent')}</h3> 
+              <div className="space-y-2 text-[#003865] dark:text-white"> 
+                <p><strong>{t('events.date')}:</strong> {t('events.dateDetail')}</p> 
+                <p><strong>{t('events.time')}:</strong> {t('events.timeDetail')}</p> 
+                <p><strong>{t('events.location')}:</strong> {t('events.locationDetail')}</p> 
+              </div> 
+            </div> 
+            <div className="flex justify-center space-x-4"> 
+              <a 
+                href="https://forms.gle/ng9m2FUAiRC57jfT8" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors" 
+              > 
+                {t('events.register')} 
+              </a> 
+            <button 
+              onClick={() => setIsMoreInfoOpen(true)} 
+              className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors" 
+              > 
+              {t('events.moreInfo')} 
+            </button>
+               <MoreInfoModal isOpen={isMoreInfoOpen} onClose={() => setIsMoreInfoOpen(false)} />
+              </div> 
+          </div> 
+        </div> 
+      </section>
+ 
+      {/* Posts Section */} 
+      <section 
+              id="posts"
+              className="min-h-screen bg-fixed bg-cover bg-center"
+              style={{
+                backgroundImage: "url('https://cdn.pixabay.com/photo/2020/07/01/21/31/pelmeni-5361081_960_720.jpg')"
+              }}
+            > 
+              <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90"> 
+                <div className="max-w-4xl mx-auto px-4 text-center"> 
+                  <div className="flex items-center justify-center space-x-4 mb-8"> 
+                    <h2 className="text-4xl font-bold text-[#003865] dark:text-white">{t('posts.title')}</h2>
+                  </div>
+                    <InstagramEmbed
+                      url="https://www.instagram.com/p/DEALUtoIrXZ/" 
+                      width="100%" // Breite auf 100% setzen 
+                      maxWidth={600} // Optional: maxWidth für größere Bildschirme, um das Reel nicht zu groß zu machen 
+                    />                   
+                </div>
+              </div> 
+            </section>
+ 
+      {/* Contact Section */} 
+      <section 
+        id="contact"
+        className="min-h-screen bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage: "url('https://images.pexels.com/photos/774448/pexels-photo-774448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')"
+        }}
+      >
+        <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90"> 
+          <div className="max-w-4xl mx-auto px-4"> 
+            <h2 className="text-4xl font-bold mb-8 text-center text-[#003865] dark:text-white">{t('contact.title')}</h2> 
+            <ContactForm /> 
+          </div> 
+        </div>
+      </section>
+      
       {/* Footer */}
       <footer className="bg-gray-100 dark:bg-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
