@@ -16,7 +16,7 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-export default function RitterGallery() {
+export function RitterGallery() {
   const [open, setOpen] = useState(false);
 
   const slides = [
