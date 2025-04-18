@@ -28,6 +28,7 @@ const de = {
         'Unsere erste Firmenbesichtigung führte uns am 09. April 2025 zu Ritter Sport. Wir bekamen exklusive Einblicke in die Produktion, Qualitätskontrolle und Karrierewege des Traditionsunternehmens.<br /><br />Hier ein Gruppenbild unserer VLS‑Mitglieder vor der Produktionshalle.',
       imageAlt: 'Gruppenbild der VLS Hohenheim bei Ritter Sport Exkursion',
     },
+  }, 
   events: {
     title: 'Kommende Veranstaltungen',
     nextEvent: 'Exkursion Ritter Sport',
