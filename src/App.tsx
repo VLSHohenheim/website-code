@@ -67,7 +67,9 @@ function App() {
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">{t('about.title')}</h2>
-            <p className="text-lg text-[#003865] dark:text-white">{t('about.content')}</p>
+            <p className="text-lg text-[#003865] dark:text-white">
+              <Trans i18nKey="about.content" components={{ strong: <strong /> }} />
+            </p>
           </div>
         </div>
       </section>
