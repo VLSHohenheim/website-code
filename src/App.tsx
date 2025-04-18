@@ -7,7 +7,7 @@ import ContactForm from './components/ContactForm';
 import ImpressumModal from './components/ImpressumModal';
 import MoreInfoModal from './components/MoreInfoModal';
 import { Trans } from 'react-i18next';
-import ritterBild from '../assets/ritter-exkursion-gruppenbild.jpeg';
+import ritterBild from './assets/ritter-exkursion-gruppenbild.jpeg';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
