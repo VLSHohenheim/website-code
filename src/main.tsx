@@ -1,4 +1,5 @@
-import { StrictMode } from 'react';
+import './i18n/translations'; // oder wo auch immer du i18n initialisierst
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -11,17 +12,17 @@ i18n
   .init({
     resources: {
       en: { translation: translations.en },
-      de: { translation: translations.de }
+      de: { translation: translations.de },
     },
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: 'de',
+    fallbackLng: 'de',
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <React.StrictMode>
     <App />
-  </StrictMode>
+  </React.StrictMode>
 );
