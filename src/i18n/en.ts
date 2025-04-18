@@ -13,7 +13,7 @@ const en = {
   about: {
     title: 'About Us',
     content:
-      'VLS Hohenheim – the Association of Food Science Students in Hohenheim – is a dedicated student organization at the University of Hohenheim that represents the interests of food science students. We promote networking, professional exchange, and career development. Our goal is to build bridges between academic studies and real-world practice. We regularly organize exciting excursions to biotechnology or food industry companies. As a central platform for food science students in Hohenheim, we offer opportunities to connect with industry partners. Whether you’re new to the University of Hohenheim or looking to get involved – at VLS Hohenheim, you’ll find the right community. Together, we make studying more vibrant, practice-oriented, and future-focused.',
+      'VLS Hohenheim – the <strong>Association of Food Science Students Hohenheim</strong> – is a dedicated student organization at the <strong>University of Hohenheim</strong> that represents the interests of <strong>food science students</strong>. We promote <strong>networking, professional exchange, and career development</strong>. Our goal is to build <strong>bridges between academic studies and the industry</strong>. We regularly organize <strong>exciting excursions to companies in the biotech or food industry</strong>. As a central platform for food science students in Hohenheim, we offer opportunities to connect with industry partners. Whether you’re new to the University of Hohenheim or looking to get involved – at <strong>VLS Hohenheim</strong>, you’ll find the right community. Together, we make studying more vibrant, practice-oriented, and future-focused!',
   },
   events: {
     title: 'Upcoming Events',
