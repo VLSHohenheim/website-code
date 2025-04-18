@@ -13,7 +13,7 @@ const de = {
   about: {
     title: 'Über Uns',
     content:
-      'VLS Hohenheim ist eine studentische Organisation, die sich der Vernetzung von Lebensmittelwissenschaftsstudierenden und der Förderung der beruflichen Entwicklung widmet.',
+      'VLS Hohenheim – die Vereinigung Lebensmittelwissenschaftlicher Studierender in Hohenheim – ist eine engagierte, studentische Vereinigung an der Universität Hohenheim, die sich für die Interessen von Lebensmittelwissenschaft-Studierenden einsetzt. Wir fördern die Vernetzung, den fachlichen Austausch sowie die berufliche Entwicklung unserer Mitglieder. Unser Ziel ist es, Brücken zwischen Studium und Praxis zu schlagen. Dazu organisieren wir regelmäßig spannende Exkursionen zu Unternehmen der Biotechnologie- oder Lebensmittelbranche. Als zentrale Plattform für Food Science Students in Hohenheim bieten wir Möglichkeiten zur Vernetzung mit Industriepartnern. Ob du neu an der Uni Hohenheim bist oder dich aktiv einbringen möchtest – bei der VLS Hohenheim findest du die richtige Community. Gemeinsam gestalten wir das Studium lebendiger, praxisnäher und zukunftsorientiert.',
   },
   events: {
     title: 'Kommende Veranstaltungen',
