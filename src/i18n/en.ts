@@ -20,7 +20,7 @@ const en = {
     stadtradeln: {
       title: 'Bike Challenge 2025: Ultimate Frisbee Gang sponsored by VLS Hohenheim',
       content:
-        'This year’s Bike Challenge sees our Ultimate Frisbee team riding under a new name: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />With this sponsorship we underline our commitment to <strong>sustainable mobility</strong> and <strong>team spirit</strong>. From May 5th we will be cycling together for cleaner air, less traffic and stronger community bonds!<br /><br />As an incentive, team members finishing in places 1–3 each win a free ticket to our next excursion and a small surprise.',
+        'This year’s Bike Challenge sees our Ultimate Frisbee team "Pulldoggs Hohenheim" riding under a new name: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />With this sponsorship we underline our commitment to <strong>sustainable mobility</strong> and <strong>team spirit</strong>. From May 5th we will be cycling together for cleaner air, less traffic and stronger community bonds.<br /><br />Team members finishing in places 1–3 each win a free ticket to our next excursion and a small surprise. Join our team here: https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443',
     },
     excursion: {
       title: 'First Excursion: Visit to Ritter Sport, Waldenbuch',
