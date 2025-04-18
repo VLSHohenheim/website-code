@@ -111,37 +111,47 @@ function App() {
 
       {/* Aktuelles Section */}
       <section
-        id="aktuelles"
-        className="py-20 bg-white dark:bg-gray-900"
-      >
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          {/* Titel */}
-          <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
-            {t('aktuelles.title')}
-          </h2>
+  id="aktuelles"
+  className="py-20 bg-white dark:bg-gray-900"
+>
+  <div className="max-w-4xl mx-auto px-4 text-center">
+    {/* Titel */}
+    <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
+      {t('aktuelles.title')}
+    </h2>
 
-          {/* 1. Beitrag: Stadtradeln */}
-          <div className="mb-12 text-left">
-            <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-              {t('aktuelles.stadtradeln.title')}
-            </h3>
-            <p className="text-lg mb-4 text-[#003865] dark:text-white">
-              <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
-            </p>
-          </div>
+    {/* 1. Beitrag: Stadtradeln */}
+    <div className="mb-12 text-left">
+      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+        {t('aktuelles.stadtradeln.title')}
+      </h3>
+      <p className="text-lg mb-4 text-[#003865] dark:text-white">
+        <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
+      </p>
+      {/* Button, der zum Stadtradeln-Link führt */}
+      <div className="flex justify-center">
+        <button
+          onClick={() => window.open('https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443', '_blank')}
+          className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
+        >
+          {t('aktuelles.stadtradeln.button')}
+        </button>
+      </div>
+    </div>
 
-          {/* 2. Beitrag: Ritter Sport Exkursion */}
-          <div className="text-left">
-            <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-              {t('aktuelles.excursion.title')}
-            </h3>
-            <p className="text-lg mb-6 text-[#003865] dark:text-white">
-              <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
-            </p>
-            <RitterGallery />
-          </div>
-        </div>
-      </section>
+    {/* 2. Beitrag: Ritter Sport Exkursion */}
+    <div className="text-left">
+      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+        {t('aktuelles.excursion.title')}
+      </h3>
+      <p className="text-lg mb-6 text-[#003865] dark:text-white">
+        <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
+      </p>
+      <RitterGallery />
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-gray-100 dark:bg-gray-800 py-8">
