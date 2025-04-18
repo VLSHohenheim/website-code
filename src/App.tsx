@@ -148,7 +148,6 @@ function App() {
         <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
       </p>
       <RitterGallery />
-       </div>
     </div>
   </div>
 </section>
