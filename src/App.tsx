@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import ContactForm from './components/ContactForm';
 import ImpressumModal from './components/ImpressumModal';
 import MoreInfoModal from './components/MoreInfoModal';
+import { Trans } from 'react-i18next';
 
 
 function App() {
