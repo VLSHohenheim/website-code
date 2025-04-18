@@ -7,7 +7,7 @@ import ContactForm from './components/ContactForm';
 import ImpressumModal from './components/ImpressumModal';
 import MoreInfoModal from './components/MoreInfoModal';
 import { Trans } from 'react-i18next';
-
+import ritterBild from '../assets/ritter-exkursion-gruppenbild.jpeg';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -105,11 +105,11 @@ function App() {
       <p className="text-lg mb-6 text-[#003865] dark:text-white">
         {t('aktuelles.excursion.content')}
       </p>
-      <img
-        src="/images/ritter-exkursion-gruppenbild.jpg"
-        alt={t('aktuelles.excursion.imageAlt')}
-        className="mx-auto rounded-lg shadow-lg max-w-full"
-      />
+        <img
+          src={ritterBild}
+          alt={t('aktuelles.excursion.imageAlt')}
+          className="mx-auto rounded-lg shadow-lg max-w-full"
+        />
     </div>
   </div>
 </section>
