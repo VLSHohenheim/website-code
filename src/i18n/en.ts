@@ -1,4 +1,4 @@
-// englische Übersetzungen
+// englische Übersetzungen 
 const en = {
   nav: {
     about: 'About Us',
