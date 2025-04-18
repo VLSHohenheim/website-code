@@ -11,6 +11,7 @@ import ritterBild from './assets/ritter-exkursion-gruppenbild.jpeg';
 import ritterBild2 from './assets/ritter-exkursion-bild2.jpg';
 import ritterBild3 from './assets/ritter-exkursion-bild3.jpeg';
 import ritterBild4 from './assets/ritter-exkursion-bild4.jpg';
+import ExkursionGallery from './components/ExkursionGallery';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -101,21 +102,16 @@ function App() {
     </div>
 
     {/* 2. Beitrag: Ritter Sport Exkursion */}
-    <div className="text-left">
-      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-        {t('aktuelles.excursion.title')}
-      </h3>
-      <p className="text-lg mb-6 text-[#003865] dark:text-white">
-        {t('aktuelles.excursion.content')}
-      </p>
-        
-      {/* Galerie mit Gruppenbild zuerst */}
-<div className="text-center">
-  <img
-    src={ritterBild}
-    alt={t('aktuelles.excursion.imageAlt')}
-    className="mx-auto rounded-lg shadow-lg max-w-full md:max-w-2xl mb-6"
-  />
+<div className="text-left">
+  <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+    {t('aktuelles.excursion.title')}
+  </h3>
+  <p className="text-lg mb-6 text-[#003865] dark:text-white">
+    {t('aktuelles.excursion.content')}
+  </p>
+  
+  <ExkursionGallery />
+</div>
 
   {/* Button zum Aufklappen */}
   {!showGallery && (
