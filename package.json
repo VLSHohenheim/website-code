@@ -18,7 +18,9 @@
     "react-i18next": "^14.0.5",
     "react-scroll": "^1.9.0",
     "react-social-media-embed": "^2.5.17",
-    "react-image-lightbox": "^5.1.1"
+    "yet-another-react-lightbox": "^2.15.0",
+    "yet-another-react-lightbox/plugins/thumbnails": "^2.15.0"
+    
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
