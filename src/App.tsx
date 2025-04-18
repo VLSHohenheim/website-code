@@ -8,6 +8,9 @@ import ImpressumModal from './components/ImpressumModal';
 import MoreInfoModal from './components/MoreInfoModal';
 import { Trans } from 'react-i18next';
 import ritterBild from './assets/ritter-exkursion-gruppenbild.jpeg';
+import ritterBild2 from './assets/ritter-exkursion-bild2.jpg';
+import ritterBild3 from './assets/ritter-exkursion-bild3.jpeg';
+import ritterBild4 from './assets/ritter-exkursion-bild4.jpg';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -15,7 +18,7 @@ function App() {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
-
+  const [showGallery, setShowGallery] = useState(false);
   
   useEffect(() => {
     if (isDarkMode) {
@@ -105,11 +108,39 @@ function App() {
       <p className="text-lg mb-6 text-[#003865] dark:text-white">
         {t('aktuelles.excursion.content')}
       </p>
+        
+      {/* Galerie mit Gruppenbild zuerst */}
+<div className="text-center">
+  <img
+    src={ritterBild}
+    alt={t('aktuelles.excursion.imageAlt')}
+    className="mx-auto rounded-lg shadow-lg max-w-full md:max-w-2xl mb-6"
+  />
+
+  {/* Button zum Aufklappen */}
+  {!showGallery && (
+    <button
+      onClick={() => setShowGallery(true)}
+      className="mt-2 px-5 py-2 bg-[#003865] text-white rounded hover:bg-[#002845] transition"
+    >
+      Weitere Bilder anzeigen
+    </button>
+  )}
+
+  {/* Galerie-Bilder */}
+  {showGallery && (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+      {[ritterBild2, ritterBild3, ritterBild4].map((src, idx) => (
         <img
-          src={ritterBild}
-          alt={t('aktuelles.excursion.imageAlt')}
-          className="mx-auto rounded-lg shadow-lg max-w-full"
+          key={idx}
+          src={src}
+          alt={`Ritter Sport Bild ${idx + 2}`}
+          className="rounded-md shadow-md object-cover max-h-80 w-full"
         />
+      ))}
+    </div>
+  )}
+</div>
     </div>
   </div>
 </section>
