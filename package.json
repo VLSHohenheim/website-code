@@ -19,7 +19,7 @@
     "react-scroll": "^1.9.0",
     "react-social-media-embed": "^2.5.17",
     "yet-another-react-lightbox": "^2.15.0",
-    "yet-another-react-lightbox/plugins/thumbnails": "^2.15.0"
+    "yet-another-react-lightbox": "^2.15.0"
     
   },
   "devDependencies": {
