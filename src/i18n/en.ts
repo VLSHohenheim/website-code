@@ -27,6 +27,7 @@ const en = {
       content:
         'On April 9th 2025, we had our first company visit at Ritter Sport. We enjoyed exclusive insights into production lines, quality control and career opportunities at this iconic chocolate manufacturer.<br /><br />Below is a group photo of our VLS members in front of the production hall.',
       imageAlt: 'Group photo of VLS Hohenheim during Ritter Sport excursion',
+      },
     },
   events: {
     title: 'Upcoming Events',
