@@ -20,7 +20,8 @@ const de = {
     stadtradeln: {
       title: 'Stadtradeln 2025: Ultimate Frisbee Gang sponsored by VLS Hohenheim',
       content:
-        'Beim diesjährigen Stadtradeln ist das Ultimate Frisbee Team aus Hohenheim "Pulldoggs Hohenheim" unter neuem Namen am Start: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />Mit diesem Namenssponsoring zeigen wir unser Engagement für <strong>nachhaltige Mobilität</strong> und <strong>sportlichen Teamgeist</strong>. Ab dem 05. Mai radeln wir gemeinsam für bessere Luft, weniger Verkehr und mehr Zusammenhalt!<br /><br />Als Ansporn erhalten die Teammitglieder auf Platz 1–3 je eine Freikarte für unsere nächste Exkursion und eine kleine Überraschung. Meldet euch unter folgendem Link für das Stadtradeln an: https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443',
+        'Beim diesjährigen Stadtradeln ist das Ultimate Frisbee Team aus Hohenheim "Pulldoggs Hohenheim" unter neuem Namen am Start: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />Mit diesem Namenssponsoring zeigen wir unser Engagement für <strong>nachhaltige Mobilität</strong> und <strong>sportlichen Teamgeist</strong>. Ab dem 05. Mai radeln wir gemeinsam für bessere Luft, weniger Verkehr und mehr Zusammenhalt!<br /><br />Meldet euch jetzt an:',
+      button: 'Stadtradeln Anmeldung',  // Hinzugefügter Button-Text
     },
     excursion: {
       title: 'Erste Exkursion: Ritter Sport in Waldenbuch',
