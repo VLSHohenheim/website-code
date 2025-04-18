@@ -123,36 +123,33 @@ function App() {
   id="aktuelles"
   className="py-20 bg-white dark:bg-gray-900"
 >
-  <div className="max-w-4xl mx-auto px-4 text-center">
-    {/* Titel */}
-    <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
-      {t('aktuelles.title')}
-    </h2>
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      {/* Titel */}
+      <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
+        {t('aktuelles.title')}
+      </h2>
 
-    {/* 1. Beitrag: Stadtradeln */}
-    <div className="mb-12 text-left">
-      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-        {t('aktuelles.stadtradeln.title')}
-      </h3>
-      <p className="text-lg mb-4 text-[#003865] dark:text-white">
-        <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong /> }} />
-      </p>
-      {/* Optional: kleines Icon oder Figur */}
-    </div>
+      {/* 1. Beitrag: Stadtradeln */}
+      <div className="mb-12 text-left">
+        <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+          {t('aktuelles.stadtradeln.title')}
+        </h3>
+        <p className="text-lg mb-4 text-[#003865] dark:text-white">
+          <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong /> }} />
+        </p>
+        {/* Optional: kleines Icon oder Figur */}
+      </div>
 
-    {/* 2. Beitrag: Ritter Sport Exkursion */}
-<div className="text-left">
-  <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-    {t('aktuelles.excursion.title')}
-  </h3>
-  <p className="text-lg mb-6 text-[#003865] dark:text-white">
-    {t('aktuelles.excursion.content')}
-  </p>
-  
-  <RitterGallery />
-</div>
-</div>
-    </div>
+        {/* 2. Beitrag: Ritter Sport Exkursion */}
+        <div className="text-left">
+          <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+            {t('aktuelles.excursion.title')}
+          </h3>
+            <p className="text-lg mb-6 text-[#003865] dark:text-white">
+              {t('aktuelles.excursion.content')}
+            </p>
+              <RitterGallery />
+        </div>
   </div>
 </section>
       
