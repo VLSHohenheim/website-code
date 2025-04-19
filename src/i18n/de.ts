@@ -14,11 +14,11 @@ const de = {
   about: {
     title: 'Über Uns',
     content: `
-      This year’s Bike Challenge sees our Ultimate Frisbee team "Pulldoggs Hohenheim" riding under a new name: 
-      <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong><br /><br />
-      With this sponsorship we underline our commitment to <strong>sustainable mobility</strong> and <strong>team spirit</strong>. 
-      From May 5th we will be cycling together for cleaner air, less traffic and stronger community bonds.<br /><br />
-      Team members finishing in places 1–3 each win a free ticket to our next excursion and a small surprise. Join our team now!
+      VLS Hohenheim – die <strong>Vereinigung Lebensmittelwissenschaftlicher Studierender Hohenheim</strong> – ist ein engagierter Verein an der <strong>Universität Hohenheim</strong>, der die Interessen der <strong>Lebensmittelwissenschafts-Studierenden</strong> vertritt.<br /><br />
+Wir fördern <strong>Vernetzung</strong>, <strong>fachlichen Austausch</strong> und <strong>berufliche Weiterentwicklung</strong>.<br /><br />
+Unser Ziel ist es, <strong>Brücken zwischen Studium und Industrie</strong> zu bauen. Dafür organisieren wir regelmäßig <strong>spannende Exkursionen zu Unternehmen der Biotech- und Lebensmittelbranche</strong>.<br /><br />
+Als zentrale Plattform für Lebensmittelwissenschafts-Studierende aus Stuttgart bieten wir Möglichkeiten, <strong>Kontakte zu Industriepartnern zu knüpfen</strong>.<br /><br />
+Egal, ob du neu an der Universität Hohenheim bist oder dich engagieren und <strong>selbst eine Exkursion mitplanen</strong> möchtest – bei <strong>VLS Hohenheim</strong> findest du die passende Community. Gemeinsam machen wir das Studium <strong>lebendiger, praxisnäher und zukunftsorientierter</strong>!
 `,
   },
   aktuelles: {
