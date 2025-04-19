@@ -31,7 +31,7 @@ export function RitterGallery() {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
   
- // Automatischer Wechsel alle 5 Sekunden
+  // Automatischer Wechsel alle 5 Sekunden
   useEffect(() => {
     if (!open) {
       const timer = setInterval(() => {
@@ -120,10 +120,8 @@ export function RitterGallery() {
           />
         ))}
       </div>
-    </div>
-  );
-}
 
+      {/* Lightbox-Komponente */}
       <Lightbox
         open={open}
         close={() => setOpen(false)}
