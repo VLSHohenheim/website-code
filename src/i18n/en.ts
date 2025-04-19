@@ -26,7 +26,7 @@ const en = {
     excursion: {
       title: 'First Excursion: Visit to Ritter Sport, Waldenbuch',
       content:
-        'On April 9th 2025, we had our first company excursion at Ritter Sport. We enjoyed exclusive insights into production lines, quality control and career opportunities at this iconic chocolate manufacturer.<br /><br />Below is a group photo of our VLS members in front of the production hall.',
+        'On April 9th 2025, we had our first company excursion at Ritter Sport. We enjoyed exclusive insights into production lines, R&D and career opportunities at this iconic chocolate manufacturer.<br /><br />Below are some impressions of our VLS excursion to Ritter Sport.',
       imageAlt: 'Group photo of VLS Hohenheim during Ritter Sport excursion',
     },
   },
