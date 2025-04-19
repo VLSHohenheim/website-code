@@ -111,8 +111,11 @@ function App() {
 
       {/* Aktuelles Section */}
       <section
-  id="aktuelles"
-  className="py-20 bg-white dark:bg-gray-900"
+        id="aktuelles"
+        className="py-20 bg-white dark:bg-gray-900"
+        style={{ 
+          backgroundImage: "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" 
+        }} 
 >
   <div className="max-w-4xl mx-auto px-4 text-center">
     {/* Titel */}
