@@ -43,12 +43,13 @@ export function RitterGallery() {
 return (
     <div className="text-center">
       <div className="relative max-w-3xl mx-auto cursor-pointer" onClick={() => setOpen(true)}>
-        <div className="h-[500px] w-full flex items-center justify-center bg-black bg-opacity-10 rounded-lg shadow-lg overflow-hidden">
+        <div className="h-[500px] w-full flex items-center justify-center bg-black bg-opacity-10 rounded-lg shadow-lg overflow-hidden relative">
+          {/* Übergangsbild */}
           <img
-            key={index} // wichtig für Transition beim Wechsel
+            key={index} // wichtig für animierten Wechsel
             src={slides[index].src}
             alt={`Exkursionsbild ${index + 1}`}
-            className="object-contain h-full transition-opacity duration-700 opacity-100"
+            className="absolute object-contain h-full w-full transition-opacity duration-1000 opacity-100"
           />
         </div>
 
