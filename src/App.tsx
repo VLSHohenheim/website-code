@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Mail } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
@@ -28,21 +28,50 @@ export function RitterGallery() {
     { src: ritter3 },
     { src: ritter4 },
   ];
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
   
-// Automatischer Wechsel alle 5 Sekunden
- useEffect(() => {
-  if (!open) {
-    const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000);
+ // Automatischer Wechsel alle 5 Sekunden
+  useEffect(() => {
+    if (!open) {
+      const timer = setInterval(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      }, 5000);
 
-    return () => clearInterval(timer);
-  }
-}, [open, slides.length]);
-  
-return (
+      return () => clearInterval(timer);
+    }
+  }, [open, slides.length]);
+
+  // Funktion, um das Swipen per Touch zu erkennen
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      // Swipe nach links
+      setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }
+
+    if (touchEndX.current - touchStartX.current > 50) {
+      // Swipe nach rechts
+      setIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    }
+  };
+
+  return (
     <div className="text-center">
-      <div className="relative max-w-3xl mx-auto cursor-pointer" onClick={() => setOpen(true)}>
+      <div
+        className="relative max-w-3xl mx-auto cursor-pointer"
+        onClick={() => setOpen(true)}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="h-[500px] w-full bg-black bg-opacity-10 rounded-lg shadow-lg overflow-hidden relative">
           <div
             className="flex h-full w-full transition-transform duration-700 ease-in-out"
@@ -58,7 +87,6 @@ return (
             ))}
           </div>
         </div>
-
 
         {/* Optional: Pfeile links/rechts */}
         <button
@@ -92,6 +120,9 @@ return (
           />
         ))}
       </div>
+    </div>
+  );
+}
 
       <Lightbox
         open={open}
