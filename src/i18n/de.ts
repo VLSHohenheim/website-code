@@ -2,6 +2,7 @@
 const de = {
   nav: {
     about: 'Über Uns',
+    aktuelles: 'Aktuelles',
     events: 'Veranstaltungen',
     posts: 'Beiträge',
     contact: 'Kontakt',
