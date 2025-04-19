@@ -152,8 +152,9 @@ function App() {
   </div>
 </section>
 
-{/* Events Section */}
- 
+      
+{/* Events Section gesilenced */}
+ {/*
       <section 
         id="events" 
         className="min-h-screen bg-fixed bg-cover bg-center" 
@@ -192,6 +193,8 @@ function App() {
           </div> 
         </div> 
       </section>
+
+   */}
  
       {/* Posts Section */} 
       <section 
