@@ -110,50 +110,60 @@ function App() {
       </section>
 
       {/* Aktuelles Section */}
-      <section
-        id="aktuelles"
-        className="py-20 bg-white dark:bg-gray-900"
-        style={{ 
-          backgroundImage: "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" 
-        }} 
+<section
+  id="aktuelles"
+  className="min-h-screen bg-fixed bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')"
+  }}
 >
-  <div className="max-w-4xl mx-auto px-4 text-center">
-    {/* Titel */}
-    <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
-      {t('aktuelles.title')}
-    </h2>
+  <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
+    <div className="max-w-4xl mx-auto px-4 text-center">
 
-    {/* 1. Beitrag: Stadtradeln */}
-    <div className="mb-12 text-left">
-      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-        {t('aktuelles.stadtradeln.title')}
-      </h3>
-      <p className="text-lg mb-4 text-[#003865] dark:text-white">
-        <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
-      </p>
-      {/* Button, der zum Stadtradeln-Link führt */}
-      <div className="flex justify-center">
-        <button
-          onClick={() => window.open('https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443', '_blank')}
-          className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
-        >
-          {t('aktuelles.stadtradeln.button')}
-        </button>
+      {/* Titel */}
+      <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
+        {t('aktuelles.title')}
+      </h2>
+
+      {/* 1. Beitrag: Stadtradeln */}
+      <div className="mb-12 text-left">
+        <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+          {t('aktuelles.stadtradeln.title')}
+        </h3>
+        <p className="text-lg mb-4 text-[#003865] dark:text-white">
+          <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
+        </p>
+        <div className="flex justify-center">
+          <button
+            onClick={() =>
+              window.open(
+                'https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443',
+                '_blank'
+              )
+            }
+            className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
+          >
+            {t('aktuelles.stadtradeln.button')}
+          </button>
+        </div>
       </div>
-    </div>
 
-    {/* 2. Beitrag: Ritter Sport Exkursion */}
-    <div className="text-left">
-      <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-        {t('aktuelles.excursion.title')}
-      </h3>
-      <p className="text-lg mb-6 text-[#003865] dark:text-white">
-        <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
-      </p>
-      <RitterGallery />
+      {/* 2. Beitrag: Ritter Sport Exkursion */}
+      <div className="text-left">
+        <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+          {t('aktuelles.excursion.title')}
+        </h3>
+        <p className="text-lg mb-6 text-[#003865] dark:text-white">
+          <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
+        </p>
+        <RitterGallery />
+      </div>
+
     </div>
   </div>
 </section>
+
 
       
 {/* Events Section gesilenced */}
