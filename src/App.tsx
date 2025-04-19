@@ -81,14 +81,12 @@ return (
       </div>
 
       <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={slides}
-        plugins={[Thumbnails]}
-        index={index}
-        on={{
-          view: (newIndex) => setIndex(newIndex),
-        }}
+          open={open}
+          close={() => setOpen(false)}
+          slides={slides}
+          plugins={[Thumbnails]}
+          controller={{ closeOnBackdropClick: true }}
+          index={index}
       />
     </div>
   );
