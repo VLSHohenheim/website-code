@@ -30,13 +30,15 @@ export function RitterGallery() {
   ];
   
 // Automatischer Wechsel alle 5 Sekunden
-  useEffect(() => {
+ useEffect(() => {
+  if (!open) {
     const timer = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }
+}, [open, slides.length]);
   
 return (
     <div className="text-center">
