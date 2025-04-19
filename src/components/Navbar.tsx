@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
               {t('nav.about')}
             </Link>
             <Link to="aktuelles" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300">
-              {t('nav.events')}
+              {t('nav.aktuelles')}
             </Link>
             <Link to="posts" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300">
               {t('nav.posts')}
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode, toggleLangu
             {t('nav.about')}
           </Link>
           <Link to="aktuelles" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
-            {t('nav.events')}
+            {t('nav.aktuelles')}
           </Link>
           <Link to="posts" smooth={true} duration={500} className="cursor-pointer text-gray-800 dark:text-white hover:text-[#003865] dark:hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>
             {t('nav.posts')}
