@@ -94,7 +94,7 @@ export function RitterGallery() {
             e.stopPropagation();
             setIndex((index - 1 + slides.length) % slides.length);
           }}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-all ease-in-out duration-200 shadow-md"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center w-8 h-8 hover:bg-opacity-70 transition-all ease-in-out duration-200 shadow-md"
           style={{
             fontSize: '1.2rem',
             boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',  // leichter Schlagschatten
@@ -102,13 +102,13 @@ export function RitterGallery() {
         >
           ‹
         </button>
-
-         <button
+        
+          <button
             onClick={(e) => {
               e.stopPropagation();
               setIndex((index + 1) % slides.length);
             }}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-all ease-in-out duration-200 shadow-md"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full flex items-center justify-center w-8 h-8 hover:bg-opacity-70 transition-all ease-in-out duration-200 shadow-md"
             style={{
               fontSize: '1.2rem',
               boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',  // leichter Schlagschatten
