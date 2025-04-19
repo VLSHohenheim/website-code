@@ -16,8 +16,11 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
+
+
 export function RitterGallery() {
   const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const slides = [
     { src: ritter1 },
@@ -25,20 +28,67 @@ export function RitterGallery() {
     { src: ritter3 },
     { src: ritter4 },
   ];
+  
+// Automatischer Wechsel alle 5 Sekunden
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000);
 
-  return (
+    return () => clearInterval(timer);
+  }, [slides.length]);
+  
+return (
     <div className="text-center">
-      <img
-        src={ritter1}
-        alt="Gruppenbild VLS Hohenheim"
-        onClick={() => setOpen(true)}
-        className="cursor-pointer rounded-lg shadow-lg max-w-full mx-auto"
-      />
+      <div className="relative max-w-3xl mx-auto cursor-pointer" onClick={() => setOpen(true)}>
+        <img
+          src={slides[index].src}
+          alt={`Exkursionsbild ${index + 1}`}
+          className="rounded-lg shadow-lg object-contain w-full max-h-[500px] transition-opacity duration-700"
+        />
+
+        {/* Optional: Pfeile links/rechts */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setIndex((index - 1 + slides.length) % slides.length);
+          }}
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full px-3 py-1 text-xl hover:bg-opacity-60"
+        >
+          ‹
+        </button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setIndex((index + 1) % slides.length);
+          }}
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full px-3 py-1 text-xl hover:bg-opacity-60"
+        >
+          ›
+        </button>
+      </div>
+
+      {/* Punkte zur Anzeige der Galerie */}
+      <div className="flex justify-center mt-3 space-x-2">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              i === index ? 'bg-[#003865]' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </div>
+
       <Lightbox
         open={open}
         close={() => setOpen(false)}
         slides={slides}
         plugins={[Thumbnails]}
+        index={index}
+        on={{
+          view: (newIndex) => setIndex(newIndex),
+        }}
       />
     </div>
   );
