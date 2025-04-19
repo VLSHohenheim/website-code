@@ -3,6 +3,7 @@ const en = {
   nav: {
     about: 'About Us',
     events: 'Events',
+    aktuelles: 'News',
     posts: 'Posts',
     contact: 'Contact',
   },
