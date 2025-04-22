@@ -170,9 +170,10 @@ function App() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.stadtradeln.title')}
                 </h3>
-                <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 flex-1">
+                {/* Hier kein lg:items-center mehr, sondern oben ausgerichtet */}
+                <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8 flex-1">
                   <div className="flex-1">
-                    <p className="text-lg mb-4 text-[#003865] dark:text-white">
+                    <p className="text-lg mt-0 mb-4 text-[#003865] dark:text-white">
                       <Trans
                         i18nKey="aktuelles.stadtradeln.content"
                         components={{ strong: <strong />, br: <br /> }}
@@ -205,7 +206,7 @@ function App() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.excursion.title')}
                 </h3>
-                <p className="text-lg mb-6 text-[#003865] dark:text-white">
+                <p className="text-lg mt-0 mb-6 text-[#003865] dark:text-white">
                   <Trans
                     i18nKey="aktuelles.excursion.content"
                     components={{ br: <br />, strong: <strong /> }}
