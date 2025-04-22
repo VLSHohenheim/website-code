@@ -115,13 +115,16 @@ function App() {
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
 
-  // Intersection Observer für automatisches Abspielen
+  // Intersection Observer für automatisches Abspielen und Pausieren
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && videoRef.current) {
+          if (!videoRef.current) return;
+          if (entry.isIntersecting) {
             videoRef.current.play();
+          } else {
+            videoRef.current.pause();
           }
         });
       },
