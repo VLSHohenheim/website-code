@@ -61,7 +61,7 @@ export function RitterGallery() {
       setIndex((prev) => (prev - 1 + slides.length) % slides.length); // rechts
     }
   };
-  
+
   const videoRef = useRef(null);
 
   return (
@@ -191,56 +191,48 @@ function App() {
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">{t('aktuelles.title')}</h2>
 
             {/* Beitrag: Stadtradeln mit responsive Video */}
-            <div className="mb-12 text-left">
-              <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-                {t('aktuelles.stadtradeln.title')}
-              </h3>
+            <div className="mb-12 text-left flex flex-col lg:flex-row lg:items-center lg:space-x-8">
+              <div className="flex-1 mb-6 lg:mb-0">
+                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+                  {t('aktuelles.stadtradeln.title')}
+                </h3>
+                <p className="text-lg mb-4 text-[#003865] dark:text-white">
+                  <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
+                </p>
+                <a
+                  href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
+                >
+                  {t('aktuelles.stadtradeln.button')}
+                </a>
+              </div>
 
-              {/* Responsive Layout: Stack on mobile, side-by-side on desktop */}
-              <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
-                
-                {/* Text & Button */}
-                <div className="flex-1 mb-6 lg:mb-0">
-                  <p className="text-lg mb-4 text-[#003865] dark:text-white">
-                    <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
-                  </p>
-                  <a
-                    href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
+              <div className="flex-1">
+                <div
+                  className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center"
+                  onMouseEnter={() => {
+                    if (videoRef.current) videoRef.current.play();
+                  }}
+                  onMouseLeave={() => {
+                    if (videoRef.current) {
+                      videoRef.current.pause();
+                      videoRef.current.currentTime = 0;
+                    }
+                  }}
+                >
+                  <video
+                    ref={videoRef}
+                    src="https://i.imgur.com/JfMZUre.mp4"
+                    className="max-h-[600px] max-w-full rounded-lg"
+                    style={{ aspectRatio: '9 / 16' }}
+                    muted
+                    playsInline
+                    title="Stadtradeln Announcement Video"
                   >
-                    {t('aktuelles.stadtradeln.button')}
-                  </a>
-                </div>
-
-                  {/* Video (responsive & autoplay-on-hover) */}
-                  <div className="flex-1">
-                    <div
-                      className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center"
-                      onMouseEnter={() => {
-                        if (videoRef.current) videoRef.current.play();
-                      }}
-                      onMouseLeave={() => {
-                        if (videoRef.current) {
-                          videoRef.current.pause();
-                          videoRef.current.currentTime = 0;
-                        }
-                      }}
-                    >
-                      <video
-                        ref={videoRef}
-                        src="https://i.imgur.com/JfMZUre.mp4"
-                        className="max-h-[600px] max-w-full rounded-lg"
-                        style={{ aspectRatio: '9 / 16' }}
-                        muted
-                        playsInline
-                        title="Stadtradeln Announcement Video"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                  </div>
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
