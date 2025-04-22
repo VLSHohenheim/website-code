@@ -255,8 +255,7 @@ function App() {
               <RitterGallery />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Instagram-Einbindung in der Posts-Sektion */}
       <section id="posts" className="min-h-screen bg-fixed bg-cover bg-center"
