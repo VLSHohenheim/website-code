@@ -108,7 +108,10 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
+
+  // Refs für STadtradeln-Video und Instagram-Reel
   const videoRef = useRef<HTMLVideoElement>(null);
+  const reelRef = useRef<HTMLDivElement>(null);
 
   // Dark mode toggle
   useEffect(() => {
@@ -120,19 +123,29 @@ function App() {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (!videoRef.current) return;
-          if (entry.isIntersecting) {
-            videoRef.current.play();
-          } else {
-            videoRef.current.pause();
+          // Stadtradeln-Video
+          if (entry.target === videoRef.current) {
+            if (entry.isIntersecting) videoRef.current!.play();
+            else videoRef.current!.pause();
+          }
+          // Instagram-Reel
+          if (entry.target === reelRef.current) {
+            const vids = reelRef.current!.querySelectorAll<HTMLVideoElement>('video');
+            vids.forEach(v => {
+              if (entry.isIntersecting) v.play();
+              else v.pause();
+            });
           }
         });
       },
       { threshold: 0.5 }
     );
+
     if (videoRef.current) observer.observe(videoRef.current);
+    if (reelRef.current) observer.observe(reelRef.current);
+
     return () => {
-      if (videoRef.current) observer.unobserve(videoRef.current);
+      observer.disconnect();
     };
   }, []);
 
@@ -261,7 +274,7 @@ function App() {
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+          <div ref={reelRef} className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
               {t('posts.title')}
             </h2>
