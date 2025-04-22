@@ -34,12 +34,8 @@ export function RitterGallery() {
     }
   }, [open, slides.length]);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
+  const handleTouchStart = (e: React.TouchEvent) => (touchStartX.current = e.touches[0].clientX);
+  const handleTouchMove = (e: React.TouchEvent) => (touchEndX.current = e.touches[0].clientX);
   const handleTouchEnd = () => {
     if (touchStartX.current - touchEndX.current > 50) {
       setIndex(i => (i + 1) % slides.length);
@@ -112,36 +108,32 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
-
-  // Refs für Stadtradeln-Video und Instagram-Reel-Container
   const videoRef = useRef<HTMLVideoElement>(null);
-  const reelContainerRef = useRef<HTMLDivElement>(null);
 
   // Dark mode toggle
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
 
-  // Intersection Observer für automatisches Start/Stopp via Klick-Simulation
+  // Intersection Observer für automatisches Abspielen und Pausieren
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.target === videoRef.current && videoRef.current) {
-            if (entry.isIntersecting) videoRef.current.play();
-            else videoRef.current.pause();
-          }
-          if (entry.target === reelContainerRef.current && reelContainerRef.current) {
-            // Klick auf den Reel-Container simulieren
-            reelContainerRef.current.click();
+          if (!videoRef.current) return;
+          if (entry.isIntersecting) {
+            videoRef.current.play();
+          } else {
+            videoRef.current.pause();
           }
         });
       },
       { threshold: 0.5 }
     );
     if (videoRef.current) observer.observe(videoRef.current);
-    if (reelContainerRef.current) observer.observe(reelContainerRef.current);
-    return () => observer.disconnect();
+    return () => {
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
   }, []);
 
   return (
@@ -269,7 +261,7 @@ function App() {
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div ref={reelContainerRef} className="max-w-4xl mx-auto px-4 text-center cursor-pointer">
+          <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
               {t('posts.title')}
             </h2>
@@ -291,7 +283,7 @@ function App() {
             "url('https://images.pexels.com/photos/774448/pexels-photo-774448.jpeg')",
         }}
       >
-        <div className="h-full py-20 flex	items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
+        <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
               {t('contact.title')}
@@ -304,8 +296,8 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-100 dark:bg-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex	flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex	space-x-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex space-x-4">
               <button
                 onClick={() => setIsImpressumOpen(true)}
                 className="text-[#003865] dark:text-white hover:underline"
@@ -321,7 +313,7 @@ function App() {
                 {t('footer.privacy')}
               </a>
             </div>
-            <div className="flex	items-center space-x-4">
+            <div className="flex items-center space-x-4">
               <a
                 href="https://www.instagram.com/vls_hohenheim/"
                 target="_blank"
