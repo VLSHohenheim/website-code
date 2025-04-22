@@ -212,16 +212,17 @@ function App() {
                 </div>
 
                 {/* Video (responsive & schön eingebettet) */}
-                <div className="flex-1">
-                  <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
-                    <video
-                      src="https://i.imgur.com/JfMZUre.mp4"
-                      controls
-                      className="w-full h-full object-cover rounded-lg"
-                      title="Stadtradeln Announcement Video"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
+                  <div className="flex-1">
+                    <div className="w-full max-w-[400px] mx-auto aspect-[9/16] rounded-lg shadow-lg overflow-hidden">
+                      <video
+                        src="https://i.imgur.com/JfMZUre.mp4"
+                        controls
+                        className="w-full h-full object-contain rounded-lg"
+                        title="Stadtradeln Announcement Video"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
                   </div>
                 </div>
               </div>
