@@ -184,71 +184,73 @@ function App() {
       </section>
 
       {/* Aktuelles-Sektion mit Galerie */}
-      <section id="aktuelles" className="min-h-screen bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg')" }}>
-        <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">{t('aktuelles.title')}</h2>
+<section id="aktuelles" className="min-h-screen bg-fixed bg-cover bg-center"
+  style={{ backgroundImage: "url('https://images.pexels.com/photos/918328/pexels-photo-918328.jpeg')" }}>
+  <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">{t('aktuelles.title')}</h2>
 
-            {/* Beitrag: Stadtradeln mit responsive Video */}
-            <div className="mb-12 text-left flex flex-col lg:flex-row lg:items-center lg:space-x-8">
-              <div className="flex-1 mb-6 lg:mb-0">
-                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-                  {t('aktuelles.stadtradeln.title')}
-                </h3>
-                <p className="text-lg mb-4 text-[#003865] dark:text-white">
-                  <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
-                </p>
-                <a
-                  href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
-                >
-                  {t('aktuelles.stadtradeln.button')}
-                </a>
-              </div>
+      {/* Beitrag: Stadtradeln mit responsive Video */}
+      <div className="mb-12 text-left flex flex-col lg:flex-row lg:items-center lg:space-x-8">
+        <div className="flex-1 mb-6 lg:mb-0">
+          <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+            {t('aktuelles.stadtradeln.title')}
+          </h3>
+          <p className="text-lg mb-4 text-[#003865] dark:text-white">
+            <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
+          </p>
+          <a
+            href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
+          >
+            {t('aktuelles.stadtradeln.button')}
+          </a>
+        </div>
 
-              <div className="flex-1">
-                <div
-                  className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center"
-                  onMouseEnter={() => {
-                    if (videoRef.current) videoRef.current.play();
-                  }}
-                  onMouseLeave={() => {
-                    if (videoRef.current) {
-                      videoRef.current.pause();
-                      videoRef.current.currentTime = 0;
-                    }
-                  }}
-                >
-                  <video
-                    ref={videoRef}
-                    src="https://i.imgur.com/JfMZUre.mp4"
-                    className="max-h-[600px] max-w-full rounded-lg"
-                    style={{ aspectRatio: '9 / 16' }}
-                    muted
-                    playsInline
-                    title="Stadtradeln Announcement Video"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-
-            {/* Beitrag: Ritter-Exkursion mit Galerie */}
-            <div className="text-left">
-              <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-                {t('aktuelles.excursion.title')}
-              </h3>
-              <p className="text-lg mb-6 text-[#003865] dark:text-white">
-                <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
-              </p>
-              <RitterGallery />
-            </div>
+        <div className="flex-1">
+          <div
+            className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center"
+            onMouseEnter={() => {
+              if (videoRef.current) videoRef.current.play();
+            }}
+            onMouseLeave={() => {
+              if (videoRef.current) {
+                videoRef.current.pause();
+                videoRef.current.currentTime = 0;
+              }
+            }}
+          >
+            <video
+              ref={videoRef}
+              src="https://i.imgur.com/JfMZUre.mp4"
+              className="max-h-[600px] max-w-full rounded-lg"
+              style={{ aspectRatio: '9 / 16' }}
+              muted
+              playsInline
+              title="Stadtradeln Announcement Video"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
-        </section>
+        </div>
+      </div>
+
+      {/* Beitrag: Ritter-Exkursion mit Galerie */}
+      <div className="text-left">
+        <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+          {t('aktuelles.excursion.title')}
+        </h3>
+        <p className="text-lg mb-6 text-[#003865] dark:text-white">
+          <Trans i18nKey="aktuelles.excursion.content" components={{ br: <br />, strong: <strong /> }} />
+        </p>
+        <RitterGallery />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Instagram-Einbindung in der Posts-Sektion */}
       <section id="posts" className="min-h-screen bg-fixed bg-cover bg-center"
