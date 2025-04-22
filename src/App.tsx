@@ -34,13 +34,15 @@ export function RitterGallery() {
     }
   }, [open, slides.length]);
 
-  const handleTouchStart = e => (touchStartX.current = e.touches[0].clientX);
-  const handleTouchMove = e => (touchEndX.current = e.touches[0].clientX);
+  const handleTouchStart = (e: React.TouchEvent) => (touchStartX.current = e.touches[0].clientX);
+  const handleTouchMove = (e: React.TouchEvent) => (touchEndX.current = e.touches[0].clientX);
   const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50)
+    if (touchStartX.current - touchEndX.current > 50) {
       setIndex(i => (i + 1) % slides.length);
-    if (touchEndX.current - touchStartX.current > 50)
+    }
+    if (touchEndX.current - touchStartX.current > 50) {
       setIndex(i => (i - 1 + slides.length) % slides.length);
+    }
   };
 
   return (
@@ -68,13 +70,19 @@ export function RitterGallery() {
           </div>
         </div>
         <button
-          onClick={e => { e.stopPropagation(); setIndex((index - 1 + slides.length) % slides.length); }}
+          onClick={e => {
+            e.stopPropagation();
+            setIndex((index - 1 + slides.length) % slides.length);
+          }}
           className="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
-          onClick={e => { e.stopPropagation(); setIndex((index + 1) % slides.length); }}
+          onClick={e => {
+            e.stopPropagation();
+            setIndex((index + 1) % slides.length);
+          }}
           className="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
         >
           <ChevronRight className="w-5 h-5" />
@@ -100,10 +108,30 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Dark mode toggle
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
+
+  // Intersection Observer für automatisches Abspielen
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && videoRef.current) {
+            videoRef.current.play();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => {
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, []);
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
@@ -159,18 +187,16 @@ function App() {
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
+          <div className="max-w-8xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
               {t('aktuelles.title')}
             </h2>
-
             <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-20">
               {/* Stadtradeln */}
               <div className="flex-1 flex flex-col mb-12 text-left">
                 <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.stadtradeln.title')}
                 </h3>
-                {/* Hier kein lg:items-center mehr, sondern oben ausgerichtet */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8 flex-1">
                   <div className="flex-1">
                     <p className="text-lg mt-0 mb-4 text-[#003865] dark:text-white">
@@ -191,6 +217,7 @@ function App() {
                   <div className="flex-1 flex justify-center">
                     <div className="h-[500px] w-full max-w-[400px] rounded-lg shadow-lg overflow-hidden">
                       <video
+                        ref={videoRef}
                         src="https://i.imgur.com/JfMZUre.mp4"
                         controls
                         className="w-full h-full object-contain rounded-lg"
@@ -235,7 +262,11 @@ function App() {
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
               {t('posts.title')}
             </h2>
-            <InstagramEmbed url="https://www.instagram.com/p/DEALUtoIrXZ/" width="100%" maxWidth={600} />
+            <InstagramEmbed
+              url="https://www.instagram.com/p/DEALUtoIrXZ/"
+              width="100%"
+              maxWidth={600}
+            />
           </div>
         </div>
       </section>
@@ -264,7 +295,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-4">
-              <button onClick={() => setIsImpressumOpen(true)} className="text-[#003865] dark:text-white hover:underline">
+              <button
+                onClick={() => setIsImpressumOpen(true)}
+                className="text-[#003865] dark:text-white hover:underline"
+              >
                 {t('footer.impressum')}
               </button>
               <a
@@ -277,10 +311,18 @@ function App() {
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="https://www.instagram.com/vls_hohenheim/" target="_blank" rel="noopener noreferrer" className="text-[#003865] dark:text-white hover:text-[#002845]">
+              <a
+                href="https://www.instagram.com/vls_hohenheim/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#003865] dark:text-white hover:text-[#002845]"
+              >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="mailto:vls.hohenheim@gmail.com" className="text-[#003865] dark:text-white hover:text-[#002845]">
+              <a
+                href="mailto:vls.hohenheim@gmail.com"
+                className="text-[#003865] dark:text-white hover:text-[#002845]"
+              >
                 <Mail className="h-6 w-6" />
               </a>
             </div>
