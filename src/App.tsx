@@ -255,7 +255,6 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
 
       {/* Instagram-Einbindung in der Posts-Sektion */}
       <section id="posts" className="min-h-screen bg-fixed bg-cover bg-center"
