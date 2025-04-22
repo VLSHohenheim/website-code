@@ -229,19 +229,6 @@ function App() {
                 </div>
               </div>
 
-            
-              {/* 🎥 Video-Einbettung (MP4 von imgur) */}
-              <div className="relative w-full max-w-3xl mx-auto rounded-lg shadow-lg overflow-hidden">
-                <video
-                  controls
-                  className="w-full h-auto rounded-lg"
-                  src="https://i.imgur.com/JfMZUre.mp4"
-                  title="Stadtradeln Ankündigungsvideo"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
 
             {/* Beitrag: Ritter-Exkursion mit Galerie */}
             <div className="text-left">
