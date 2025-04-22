@@ -189,7 +189,7 @@ function App() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">{t('aktuelles.title')}</h2>
 
-            {/* Beitrag: Stadtradeln */}
+            {/* Beitrag: Stadtradeln mit Video */}
             <div className="mb-12 text-left">
               <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
                 {t('aktuelles.stadtradeln.title')}
@@ -197,14 +197,34 @@ function App() {
               <p className="text-lg mb-4 text-[#003865] dark:text-white">
                 <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
               </p>
-              <div className="flex justify-center">
-                <button
-                  onClick={() =>
-                    window.open('https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443', '_blank')}
-                  className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg hover:bg-[#002845] transition-colors"
+            
+              {/* Optionaler kurzer Einleitungstext */}
+              <p className="text-md mb-4 italic text-center text-[#003865] dark:text-gray-300">
+                Join our ride for clean air, strong legs and team spirit 🚴‍♂️🌿
+              </p>
+            
+              {/* Call-to-Action Button */}
+              <div className="flex justify-center mb-8">
+                <a
+                  href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
                 >
                   {t('aktuelles.stadtradeln.button')}
-                </button>
+                </a>
+              </div>
+            
+              {/* 🎥 Video-Einbettung (MP4 von imgur) */}
+              <div className="relative w-full max-w-3xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                <video
+                  controls
+                  className="w-full h-auto rounded-lg"
+                  src="https://i.imgur.com/JfMZUre.mp4"
+                  title="Stadtradeln Ankündigungsvideo"
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 
