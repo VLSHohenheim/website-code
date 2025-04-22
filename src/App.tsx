@@ -213,11 +213,12 @@ function App() {
 
                 {/* Video (responsive & schön eingebettet) */}
                 <div className="flex-1">
-                  <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+                  <div className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center">
                     <video
                       src="https://i.imgur.com/JfMZUre.mp4"
                       controls
-                      className="w-full h-full object-cover rounded-lg"
+                      className="max-h-[600px] max-w-full rounded-lg"
+                      style={{ aspectRatio: '9 / 16' }}
                       title="Stadtradeln Announcement Video"
                     >
                       Your browser does not support the video tag.
