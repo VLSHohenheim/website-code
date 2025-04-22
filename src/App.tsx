@@ -187,7 +187,7 @@ function App() {
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          <div className="max-w-8xl mx-auto px-4 text-center">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
               {t('aktuelles.title')}
             </h2>
