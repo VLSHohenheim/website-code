@@ -211,18 +211,32 @@ function App() {
                   </a>
                 </div>
 
-                {/* Video (responsive & schön eingebettet) */}
-                <div className="flex-1">
-                  <div className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center">
-                    <video
-                      src="https://i.imgur.com/JfMZUre.mp4"
-                      controls
-                      className="max-h-[600px] max-w-full rounded-lg"
-                      style={{ aspectRatio: '9 / 16' }}
-                      title="Stadtradeln Announcement Video"
+                  {/* Video (responsive & autoplay-on-hover) */}
+                  <div className="flex-1">
+                    <div
+                      className="w-full rounded-lg shadow-lg overflow-hidden flex justify-center items-center"
+                      onMouseEnter={() => {
+                        if (videoRef.current) videoRef.current.play();
+                      }}
+                      onMouseLeave={() => {
+                        if (videoRef.current) {
+                          videoRef.current.pause();
+                          videoRef.current.currentTime = 0;
+                        }
+                      }}
                     >
-                      Your browser does not support the video tag.
-                    </video>
+                      <video
+                        ref={videoRef}
+                        src="https://i.imgur.com/JfMZUre.mp4"
+                        className="max-h-[600px] max-w-full rounded-lg"
+                        style={{ aspectRatio: '9 / 16' }}
+                        muted
+                        playsInline
+                        title="Stadtradeln Announcement Video"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
                   </div>
                 </div>
               </div>
