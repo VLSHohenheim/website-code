@@ -19,6 +19,7 @@ import ritter2 from './assets/ritter-exkursion-bild2.jpg';
 import ritter3 from './assets/ritter-exkursion-bild3.jpeg';
 import ritter4 from './assets/ritter-exkursion-bild4.jpg';
 
+// Galerie-Komponente
 export function RitterGallery() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -106,6 +107,7 @@ function App() {
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
+      {/* Navbar */}
       <Navbar
         isDarkMode={isDarkMode}
         toggleDarkMode={() => setIsDarkMode(m => !m)}
@@ -137,7 +139,9 @@ function App() {
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">{t('about.title')}</h2>
+            <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
+              {t('about.title')}
+            </h2>
             <p className="text-lg text-[#003865] dark:text-white">
               <Trans i18nKey="about.content" components={{ strong: <strong />, br: <br /> }} />
             </p>
@@ -155,23 +159,20 @@ function App() {
         }}
       >
         <div className="h-full py-20 flex items-center justify-center bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90">
-          {/* Nur hier großzügiges Padding */}
           <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">
               {t('aktuelles.title')}
             </h2>
 
-            <div className="flex flex-col lg:flex-row lg:items-stretch lg:space-x-20">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-20">
               {/* Stadtradeln */}
-              <div className="flex-1 flex flex-col mb-12 lg:mb-0 text-left lg:-mt-6">
-                {/* Einheitliche Überschriftshöhe */}
-                <h3 className="text-2xl font-semibold text-[#003865] dark:text-white mb-0 min-h-[3rem]">
+              <div className="flex-1 flex flex-col mb-12 text-left">
+                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.stadtradeln.title')}
                 </h3>
-                {/* Abstand auf ein Minimum reduziert */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 flex-1">
                   <div className="flex-1">
-                    <p className="text-lg mt-0 mb-4 text-[#003865] dark:text-white">
+                    <p className="text-lg mb-4 text-[#003865] dark:text-white">
                       <Trans
                         i18nKey="aktuelles.stadtradeln.content"
                         components={{ strong: <strong />, br: <br /> }}
@@ -200,9 +201,8 @@ function App() {
               </div>
 
               {/* Ritter-Exkursion */}
-              <div className="flex-1 flex flex-col text-left lg:pt-6">
-                {/* Einheitliche Überschriftshöhe */}
-                <h3 className="text-2xl font-semibold text-[#003865] dark:text-white mb-0 min-h-[3rem]">
+              <div className="flex-1 flex flex-col text-left">
+                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.excursion.title')}
                 </h3>
                 <p className="text-lg mb-6 text-[#003865] dark:text-white">
@@ -287,6 +287,7 @@ function App() {
         </div>
       </footer>
 
+      {/* Modale */}
       <ImpressumModal isOpen={isImpressumOpen} onClose={() => setIsImpressumOpen(false)} />
       <MoreInfoModal isOpen={isMoreInfoOpen} onClose={() => setIsMoreInfoOpen(false)} />
     </div>
