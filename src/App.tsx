@@ -61,7 +61,9 @@ export function RitterGallery() {
       setIndex((prev) => (prev - 1 + slides.length) % slides.length); // rechts
     }
   };
-
+  
+  const videoRef = useRef(null);
+  
   return (
     <div className="text-center">
       {/* Galerie mit animiertem Slidewechsel */}
