@@ -63,7 +63,7 @@ export function RitterGallery() {
   };
   
   const videoRef = useRef(null);
-  
+
   return (
     <div className="text-center">
       {/* Galerie mit animiertem Slidewechsel */}
@@ -140,6 +140,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isImpressumOpen, setIsImpressumOpen] = useState(false);
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
+  const videoRef = useRef(null); // ✅ HIER korrekt definiert
 
   // Theme Toggle (Dark/Light Mode)
   useEffect(() => {
@@ -284,48 +285,19 @@ function App() {
       </section>
 
       {/* Footer mit Impressum, Datenschutz und Social Links */}
-      <footer className="bg-gray-100 dark:bg-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-4">
-              <button
-                onClick={() => setIsImpressumOpen(true)}
-                className="text-[#003865] dark:text-white hover:underline"
-              >
-                {t('footer.impressum')}
-              </button>
-              <a
-                href="https://docs.google.com/document/d/1VtiFevXyGDk-Z3xxuCAyxYLnHza5sPklfeHdjMgli2c/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#003865] dark:text-white hover:underline"
-              >
-                {t('footer.privacy')}
-              </a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://www.instagram.com/vls_hohenheim/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#003865] dark:text-white hover:text-[#002845]"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a
-                href="mailto:vls.hohenheim@gmail.com"
-                className="text-[#003865] dark:text-white hover:text-[#002845]"
-              >
-                <Mail className="h-6 w-6" />
-              </a>
-            </div>
+      <footer className="bg-[#003865] text-white py-6">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <p>&copy; 2025 Rittergruppe. {t('footer.rights')}</p>
+          <div className="flex justify-center mt-4 space-x-6">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="mailto:contact@domain.com">
+              <Mail className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </footer>
-
-      {/* Modale Fenster */}
-      <ImpressumModal isOpen={isImpressumOpen} onClose={() => setIsImpressumOpen(false)} />
-      <MoreInfoModal isOpen={isMoreInfoOpen} onClose={() => setIsMoreInfoOpen(false)} />
     </div>
   );
 }
