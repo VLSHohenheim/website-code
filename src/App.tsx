@@ -19,7 +19,6 @@ import ritter2 from './assets/ritter-exkursion-bild2.jpg';
 import ritter3 from './assets/ritter-exkursion-bild3.jpeg';
 import ritter4 from './assets/ritter-exkursion-bild4.jpg';
 
-
 // ✅ Bild-Galerie mit Slideshow, Touch-Swipe und Lightbox
 export function RitterGallery() {
   const [open, setOpen] = useState(false);
@@ -133,7 +132,6 @@ export function RitterGallery() {
   );
 }
 
-
 // ✅ Haupt-App-Komponente
 function App() {
   const { t, i18n } = useTranslation();
@@ -189,46 +187,45 @@ function App() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-12 text-[#003865] dark:text-white">{t('aktuelles.title')}</h2>
 
-              {/* Beitrag: Stadtradeln mit responsive Video */}
-              <div className="mb-12 text-left">
-                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
-                  {t('aktuelles.stadtradeln.title')}
-                </h3>
-              
-                {/* Responsive Layout: Stack on mobile, side-by-side on desktop */}
-                <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
-                  
-                  {/* Text & Button */}
-                  <div className="flex-1 mb-6 lg:mb-0">
-                    <p className="text-lg mb-4 text-[#003865] dark:text-white">
-                      <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
-                    </p>
-                    <a
-                      href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
+            {/* Beitrag: Stadtradeln mit responsive Video */}
+            <div className="mb-12 text-left">
+              <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white">
+                {t('aktuelles.stadtradeln.title')}
+              </h3>
+
+              {/* Responsive Layout: Stack on mobile, side-by-side on desktop */}
+              <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
+                
+                {/* Text & Button */}
+                <div className="flex-1 mb-6 lg:mb-0">
+                  <p className="text-lg mb-4 text-[#003865] dark:text-white">
+                    <Trans i18nKey="aktuelles.stadtradeln.content" components={{ strong: <strong />, br: <br /> }} />
+                  </p>
+                  <a
+                    href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
+                  >
+                    {t('aktuelles.stadtradeln.button')}
+                  </a>
+                </div>
+
+                {/* Video (responsive & schön eingebettet) */}
+                <div className="flex-1">
+                  <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+                    <video
+                      src="https://i.imgur.com/JfMZUre.mp4"
+                      controls
+                      className="w-full h-full object-cover rounded-lg"
+                      title="Stadtradeln Announcement Video"
                     >
-                      {t('aktuelles.stadtradeln.button')}
-                    </a>
-                  </div>
-              
-                  {/* Video (responsive & schön eingebettet) */}
-                  <div className="flex-1">
-                    <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
-                      <video
-                        src="https://i.imgur.com/JfMZUre.mp4"
-                        controls
-                        className="w-full h-full object-cover rounded-lg"
-                        title="Stadtradeln Announcement Video"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
               </div>
-
+            </div>
 
             {/* Beitrag: Ritter-Exkursion mit Galerie */}
             <div className="text-left">
@@ -242,6 +239,7 @@ function App() {
             </div>
           </div>
         </div>
+      </section>
 
       {/* Instagram-Einbindung in der Posts-Sektion */}
       <section id="posts" className="min-h-screen bg-fixed bg-cover bg-center"
