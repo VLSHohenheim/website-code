@@ -170,7 +170,7 @@ function App() {
             <h2 className="text-4xl font-bold mb-8 text-[#003865] dark:text-white">
               {t('about.title')}
             </h2>
-            <p className="text-lg text-[#003865] dark:text-white">
+            <p className="text-lg text-justify text-[#003865] dark:text-white">
               <Trans i18nKey="about.content" components={{ strong: <strong />, br: <br /> }} />
             </p>
           </div>
@@ -199,7 +199,7 @@ function App() {
                 </h3>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8 flex-1">
                   <div className="flex-1">
-                    <p className="text-lg mt-0 mb-4 text-[#003865] dark:text-white">
+                    <p className="text-lg text-justify mt-0 mb-4 text-[#003865] dark:text-white">
                       <Trans
                         i18nKey="aktuelles.stadtradeln.content"
                         components={{ strong: <strong />, br: <br /> }}
@@ -214,7 +214,7 @@ function App() {
                       {t('aktuelles.stadtradeln.button')}
                     </a>
                   </div>
-                  <div className="flex-1 flex justify-center">
+                  <div className="flex-1 flex justify-center mt-8 lg:mt-0">
                     <div className="h-[500px] w-full max-w-[400px] rounded-lg shadow-lg overflow-hidden">
                       <video
                         ref={videoRef}
@@ -233,7 +233,7 @@ function App() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
                   {t('aktuelles.excursion.title')}
                 </h3>
-                <p className="text-lg mt-0 mb-6 text-[#003865] dark:text-white">
+                <p className="text-lg text-justify mt-0 mb-6 text-[#003865] dark:text-white">
                   <Trans
                     i18nKey="aktuelles.excursion.content"
                     components={{ br: <br />, strong: <strong /> }}
