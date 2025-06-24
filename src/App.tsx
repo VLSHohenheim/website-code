@@ -200,6 +200,32 @@ function App() {
               {t('aktuelles.title')}
             </h2>
             <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-20">
+
+              {/* Sommerfest */}
+              <div className="flex-1 flex flex-col mb-12 text-left">
+                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
+                  {t('aktuelles.sommerfest.title')}
+                </h3>
+                <p className="text-lg text-justify mt-0 mb-6 text-[#003865] dark:text-white">
+                  <Trans
+                    i18nKey="aktuelles.sommerfest.content"
+                    components={{ br: <br />, strong: <strong /> }}
+                  />
+                </p>
+                <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+                  <img
+                    src={sommerfest}
+                    alt="Sommerfest des Instituts"
+                    className="w-full md:w-1/2 rounded-lg shadow-lg object-cover max-h-[400px]"
+                  />
+                  <img
+                    src={mitgliedskarten}
+                    alt="Mitgliedskarten und Bändchen"
+                    className="w-full md:w-1/2 rounded-lg shadow-lg object-cover max-h-[400px]"
+                  />
+                </div>
+              </div>
+              
               {/* Stadtradeln */}
               <div className="flex-1 flex flex-col mb-12 text-left">
                 <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
