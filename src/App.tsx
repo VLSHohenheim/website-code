@@ -239,14 +239,6 @@ function App() {
                         components={{ strong: <strong />, br: <br /> }}
                       />
                     </p>
-                    <a
-                      href="https://www.stadtradeln.de/index.php?id=171&L=0&team_preselect=1796&subteam_preselect=7443"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-[#003865] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-[#002845] transition"
-                    >
-                      {t('aktuelles.stadtradeln.button')}
-                    </a>
                   </div>
                   <div className="flex-1 flex justify-center mt-8 lg:mt-0">
                     <div className="h-[500px] w-full max-w-[400px] rounded-lg shadow-lg overflow-hidden">
