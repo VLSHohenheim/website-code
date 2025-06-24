@@ -29,7 +29,7 @@ const en = {
     stadtradeln: {
       title: 'Bike Challenge 2025: Ultimate Frisbee Gang sponsored by VLS Hohenheim',
       content:
-        'This year\'s Bike Challenge sees our Ultimate Frisbee team "Pulldoggs Hohenheim" riding under a new name: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />With this sponsorship we underline our commitment to <strong>sustainable mobility</strong> and <strong>team spirit</strong>. From May 5th we will be cycling together for cleaner air, less traffic and stronger community bonds.<br /><br />Team members finishing in places 1–3 each win a free ticket to our next excursion and a small surprise. Join our team now!',
+        'At this year\'s Stadtradeln cycling challenge, Hohenheim\'s Ultimate Frisbee team “Pulldoggs Hohenheim” took part under a new name: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />With this name sponsorship, we demonstrate our commitment to <strong>sustainable mobility</strong> and <strong>team spirit</strong>.Between May 5 and 25, we cycled together for cleaner air, less traffic, and stronger community bonds — contributing an impressive 1,548 km to the overall result of the university team.<br /><br />For their outstanding performance and dedication, Galina Krauße (372.6 km), Eva-Madeleine Krämer (352.1 km), and Hanna Hörmann (174.4 km) were rewarded with restaurant vouchers and delicious Hohenheim honey.',
       button: 'Bike challenge registration',  // Hinzugefügter Button-Text
     },
     excursion: {
