@@ -34,7 +34,7 @@ Egal, ob du neu an der Universität Hohenheim bist oder dich engagieren und <str
     stadtradeln: {
       title: 'Stadtradeln 2025: Ultimate Frisbee Gang sponsored by VLS Hohenheim',
       content:
-        'Beim diesjährigen Stadtradeln ist das Ultimate Frisbee Team aus Hohenheim "Pulldoggs Hohenheim" unter neuem Namen am Start: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />Mit diesem Namenssponsoring zeigen wir unser Engagement für <strong>nachhaltige Mobilität</strong> und <strong>sportlichen Teamgeist</strong>. Ab dem 05. Mai radeln wir gemeinsam für bessere Luft, weniger Verkehr und mehr Zusammenhalt!<br /><br />Meldet euch jetzt an:',
+        'Beim diesjährigen Stadtradeln war das Ultimate Frisbee Team aus Hohenheim "Pulldoggs Hohenheim" unter neuem Namen am Start: <strong>Ultimate Frisbee Gang sponsored by VLS Hohenheim</strong>.<br /><br />Mit diesem Namenssponsoring zeigen wir unser Engagement für <strong>nachhaltige Mobilität</strong> und <strong>sportlichen Teamgeist</strong>. Zwischen dem 05. und 25. Mai radelten wir gemeinsam für bessere Luft, weniger Verkehr und mehr Zusammenhalt. Dabei trugen wir mit 1,548 km entscheidend zum Gesamtergebnis des Uniteams bei. Für ihre herausragende Leistung und ihr Engagement beim Stadtradeln durften sich Galina Krauße (372,6 km), Eva-Madeleine Krämer (352,1 km) und Hanna Hörmann (174,4 km) über Restaurantgutscheine und echten Hohenheimer Honig freuen.',
       button: 'Stadtradeln Anmeldung',  // Hinzugefügter Button-Text
     },
     excursion: {
