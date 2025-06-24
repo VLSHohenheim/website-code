@@ -18,7 +18,7 @@ const en = {
   },
   aktuelles: {
     title: 'News & Updates',
-    summerfest: {
+    sommerfest: {
   title: "LB Summer Festival 2025",
   content: `
     On <strong>Thursday, June 26, 2025</strong>, the big <strong>Summer Festival of the Institute of Food Science and Biotechnology</strong> will take place! 🎉<br /><br />
