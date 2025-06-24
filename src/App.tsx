@@ -19,6 +19,11 @@ import ritter2 from './assets/ritter-exkursion-bild2.jpg';
 import ritter3 from './assets/ritter-exkursion-bild3.jpeg';
 import ritter4 from './assets/ritter-exkursion-bild4.jpg';
 
+// Sommerfest Bilder
+
+import sommerfest from './assets/sommerfest.jpg';
+import mitgliedskarten from './assets/mitgliedskarten.jpg';
+
 // Galerie-Komponente
 export function RitterGallery() {
   const [open, setOpen] = useState(false);
