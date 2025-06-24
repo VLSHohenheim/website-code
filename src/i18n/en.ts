@@ -18,6 +18,14 @@ const en = {
   },
   aktuelles: {
     title: 'News & Updates',
+    summerfest: {
+  title: "LB Summer Festival 2025",
+  content: `
+    On <strong>Thursday, June 26, 2025</strong>, the big <strong>Summer Festival of the Institute of Food Science and Biotechnology</strong> will take place! 🎉<br /><br />
+    We as a student association are using this opportunity to <strong>recruit new members</strong> and connect with you.<br /><br />
+    If you <strong>join the VLS Hohenheim</strong> and help organize future events or excursions, you’ll receive an exclusive <strong>LB Summer Fest Wristband</strong> 🎟️ – it comes with <strong>free drinks at the festival</strong>! 🍻
+      `,
+    },
     stadtradeln: {
       title: 'Bike Challenge 2025: Ultimate Frisbee Gang sponsored by VLS Hohenheim',
       content:
