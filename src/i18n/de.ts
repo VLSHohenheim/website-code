@@ -27,7 +27,7 @@ Egal, ob du neu an der Universität Hohenheim bist oder dich engagieren und <str
     title: "LB-Sommerfest 2025",
     content: `
     Am <strong>Donnerstag, den 26. Juni 2025</strong> findet das große <strong>Sommerfest des Instituts für Lebensmittelwissenschaft und Biotechnologie</strong> statt! 🎉<br /><br />
-    Wir als Verein nutzen diese Gelegenheit, um <strong>neue Mitglieder</strong> für den VLS Hohenheim zu gewinnen und euch näher kennenzulernen.<br /><br />
+    Wir als Verein nutzen diese Gelegenheit, um <strong>neue Mitglieder</strong> für die VLS Hohenheim zu gewinnen und euch näher kennenzulernen.<br /><br />
     Wer <strong>dem Verein beitritt</strong> und bei zukünftigen Exkursionen oder Veranstaltungen mithelfen möchte, erhält ein exklusives <strong>LB-Sommerfest-Bändchen</strong> 🎟️ – damit erhaltet ihr <strong>Freigetränke auf dem Sommerfest</strong>! 🍻
         `,
       },
