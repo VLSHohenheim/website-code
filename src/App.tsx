@@ -214,7 +214,8 @@ function App() {
     Wir laden euch herzlich zu unserer nächsten Kombi-Exkursion ein!<br />
     Bald besuchen wir <strong>Teva (ratiopharm)</strong> in Ulm und anschließend eine
     <strong> Molkerei</strong> in Neu-Ulm. Euch erwarten spannende Einblicke in Produktion,
-    Forschung und Karrierewege – von Pharma bis Lebensmitteltechnologie. />
+    Forschung und Karrierewege – von Pharma bis Lebensmitteltechnologie.
+    <br /><br />
     Weitere Informationen zur Exkursion findet ihr im {' '}
     <a
       href="https://docs.google.com/document/d/1NP7MwyIEZbD-eG2Pm7jkE-KVzjpsKpOZO5yIBPkCYMA/edit?usp=sharing"
