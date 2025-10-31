@@ -204,7 +204,7 @@ function App() {
               {/* 🚆 Tages-Exkursion nach Ulm */}
 <div className="flex-1 flex flex-col mb-12 text-left">
   <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
-    🚆 Tages-Exkursion nach Ulm: Teva & Molkerei Neu-Ulm
+    🚆 Tages-Exkursion nach Ulm: Teva & Molkerei in Neu-Ulm
   </h3>
   <p className="text-lg text-justify mt-0 mb-6 text-[#003865] dark:text-white">
     📅 <strong>Dienstag, 25. November 2025 | 06:45 – ca. 19:00 Uhr</strong><br />
@@ -212,19 +212,28 @@ function App() {
     💬 Sprache: Deutsch
     <br /><br />
     Wir laden euch herzlich zu unserer nächsten Kombi-Exkursion ein!<br />
-    An einem Tag besuchen wir <strong>Teva (ratiopharm)</strong> in Ulm und anschließend eine
+    Bald besuchen wir <strong>Teva (ratiopharm)</strong> in Ulm und anschließend eine
     <strong> Molkerei</strong> in Neu-Ulm. Euch erwarten spannende Einblicke in Produktion,
-    Forschung und Karrierewege – von Pharma bis Lebensmitteltechnologie.
+    Forschung und Karrierewege – von Pharma bis Lebensmitteltechnologie. />
+    Weitere Informationen zur Exkursion findet ihr im {' '}
+    <a
+      href="https://docs.google.com/document/d/1NP7MwyIEZbD-eG2Pm7jkE-KVzjpsKpOZO5yIBPkCYMA/edit?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#003865] font-semibold underline hover:text-[#002845]"
+    >
+      Einladungsschreiben
+    </a>!
     <br /><br />
     💰 <strong>Teilnahmebeitrag</strong><br />
     5 € Exkursionsbeitrag + optional 0–7 € für den Gruppentransfer<br />
-    (Fördervereinsmitglieder fahren kostenlos 🚆)
+    (Fördervereinsneumitglieder fahren kostenlos 🚆)
     <br /><br />
     🧭 <strong>Ablauf (Kurzüberblick)</strong><br />
     06:45 Uhr: Abfahrt in Hohenheim<br />
     Vormittag: Unternehmensbesuch bei Teva (ratiopharm)<br />
-    Nachmittag: Exkursion zu einer Molkerei in Neu-Ulm<br />
-    ca. 19:00 Uhr: Rückkehr nach Hohenheim
+    Nachmittag: Führung durch eine große Molkerei in Neu-Ulm<br />
+    ca. 19:00 Uhr: Ankunft zurück in Hohenheim
     <br /><br />
     🍱 <strong>Hinweis</strong><br />
     Bitte bringt ein Lunchpaket mit – ein Mittagsstopp ist nicht eingeplant.
