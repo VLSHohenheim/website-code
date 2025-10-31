@@ -201,30 +201,46 @@ function App() {
             </h2>
             <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-20">
 
-              {/* Sommerfest */}
-              <div className="flex-1 flex flex-col mb-12 text-left">
-                <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
-                  {t('aktuelles.sommerfest.title')}
-                </h3>
-                <p className="text-lg text-justify mt-0 mb-6 text-[#003865] dark:text-white">
-                  <Trans
-                    i18nKey="aktuelles.sommerfest.content"
-                    components={{ br: <br />, strong: <strong /> }}
-                  />
-                </p>
-                <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-                  <img
-                    src={sommerfest}
-                    alt="Sommerfest des Instituts"
-                    className="w-full md:w-1/2 rounded-lg shadow-lg object-cover max-h-[400px]"
-                  />
-                  <img
-                    src={mitgliedskarten}
-                    alt="Mitgliedskarten und Bändchen"
-                    className="w-full md:w-1/2 rounded-lg shadow-lg object-cover max-h-[400px]"
-                  />
-                </div>
-              </div>
+              {/* 🚆 Tages-Exkursion nach Ulm */}
+<div className="flex-1 flex flex-col mb-12 text-left">
+  <h3 className="text-2xl font-semibold mb-4 text-[#003865] dark:text-white min-h-[3rem]">
+    🚆 Tages-Exkursion nach Ulm: Teva & Molkerei Neu-Ulm
+  </h3>
+  <p className="text-lg text-justify mt-0 mb-6 text-[#003865] dark:text-white">
+    📅 <strong>Dienstag, 25. November 2025 | 06:45 – ca. 19:00 Uhr</strong><br />
+    📍 Treffpunkt: Bushaltestelle Universität Hohenheim<br />
+    💬 Sprache: Deutsch
+    <br /><br />
+    Wir laden euch herzlich zu unserer nächsten Kombi-Exkursion ein!<br />
+    An einem Tag besuchen wir <strong>Teva (ratiopharm)</strong> in Ulm und anschließend eine
+    <strong> Molkerei</strong> in Neu-Ulm. Euch erwarten spannende Einblicke in Produktion,
+    Forschung und Karrierewege – von Pharma bis Lebensmitteltechnologie.
+    <br /><br />
+    💰 <strong>Teilnahmebeitrag</strong><br />
+    5 € Exkursionsbeitrag + optional 0–7 € für den Gruppentransfer<br />
+    (Fördervereinsmitglieder fahren kostenlos 🚆)
+    <br /><br />
+    🧭 <strong>Ablauf (Kurzüberblick)</strong><br />
+    06:45 Uhr: Abfahrt in Hohenheim<br />
+    Vormittag: Unternehmensbesuch bei Teva (ratiopharm)<br />
+    Nachmittag: Exkursion zu einer Molkerei in Neu-Ulm<br />
+    ca. 19:00 Uhr: Rückkehr nach Hohenheim
+    <br /><br />
+    🍱 <strong>Hinweis</strong><br />
+    Bitte bringt ein Lunchpaket mit – ein Mittagsstopp ist nicht eingeplant.
+    <br /><br />
+    📝 <strong>Anmeldung</strong><br />
+    👉 Jetzt anmelden über das{' '}
+    <a
+      href="https://forms.gle/ZFUvR6eWpuKcor1T7"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#003865] font-semibold underline hover:text-[#002845]"
+    >
+      Google-Formular
+    </a>.
+  </p>
+</div>
               
               {/* Stadtradeln */}
               <div className="flex-1 flex flex-col mb-12 text-left">
