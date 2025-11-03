@@ -218,7 +218,7 @@ function App() {
     <br /><br />
     Weitere Informationen zur Exkursion findet ihr im {' '}
     <a
-      href="https://docs.google.com/document/d/1NP7MwyIEZbD-eG2Pm7jkE-KVzjpsKpOZO5yIBPkCYMA/edit?usp=sharing"
+      href="https://vlshohenheim.github.io/Exkursion.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className="text-[#003865] font-semibold underline hover:text-[#002845]"
